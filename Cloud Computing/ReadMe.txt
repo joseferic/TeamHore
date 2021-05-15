@@ -1,1 +1,2 @@
-Hapus ini jika sudah ada file baru
+noHapus ini jika sudah ada file baru
+ok
