@@ -14,7 +14,20 @@ output = reader.readtext('sample.jpg')
 
 for i in range(len(output)):
   print((output[i][1]))
+
+from google.colab import files                                  #import dataset allergen
+uploaded = files.upload()
+
+import pandas as pd                                             #convert to dict
+import math
+data = pd.read_csv("FoodData.csv")
+data_dict = {col: list(data[col]) for col in data.columns}
+
+df = pd.DataFrame(data_dict, columns = ['Class', 'Type', 'Group', 'Food', 'Allergy'])
+
+print(df['Allergy'].where(df['Food'] == input()).dropna() )     #print out alergi
   
+#Tambahan
 cord = output[1][0]
 x_min, y_min = [int(min(idx)) for idx in zip(*cord)]
 x_max, y_max = [int(max(idx)) for idx in zip(*cord)]
