@@ -1,4 +1,4 @@
-# Node.js Rest APIs with Express & MySQL example
+# Node.js Rest APIs with Express & MySQL Horeee
 
 ## Project setup
 ```
