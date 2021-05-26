@@ -15,6 +15,8 @@ app.get("/", (req, res) => {
 });
 
 require("./app/routes/userdata.routes.js")(app);
+require("./app/routes/compsdata.routes.js")(app);
+require("./app/routes/fooddata.routes.js")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 3000;
