@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/white_radius_card"
+    android:elevation="2dp"
+    android:layout_marginLeft="32dp"
+    android:layout_marginRight="32dp"
+    android:layout_marginBottom="12dp"
+    >
+
+    <ImageView
+
+
+        android:id="@+id/image_scanned"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="14dp"
+        android:orientation="vertical"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/image_scanned"
+        android:background="@drawable/white_radius_card"
+         />
+
+    <TextView
+        android:id="@+id/tv_itemName_fav"
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:lines="2"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_itemDetail_fav"
+        app:layout_constraintStart_toEndOf="@id/image_scanned"
+        app:layout_constraintTop_toTopOf="@id/image_scanned"
+
+        tools:text="Anchovy Extract, Tuna Extract, Bonito Extract" />
+
+
+    <TextView
+        android:id="@+id/tv_itemDetail_fav"
+        android:layout_width="120dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/grey"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/image_scanned"
+        app:layout_constraintStart_toEndOf="@id/image_scanned"
+        app:layout_constraintTop_toBottomOf="@+id/tv_itemName_fav"
+        tools:text="10 Feb 2021, 12:50" />
+
+    <TextView
+        android:id="@+id/tv_itemDetail2_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:rotation="-90"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textColor="@color/purple_700"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:translationX="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Result" />
+</androidx.constraintlayout.widget.ConstraintLayout>
