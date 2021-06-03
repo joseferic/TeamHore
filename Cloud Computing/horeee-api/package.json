@@ -1,24 +1,23 @@
 {
-  "name": "nodejs-express-mysql",
+  "name": "horeee-api",
   "version": "1.0.0",
-  "description": "Node.js Restful CRUD API with Node.js, Express and MySQL",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "keywords": [
-    "nodejs",
-    "express",
-    "mysql",
-    "restapi"
-  ],
-  "author": "designmycodes",
+  "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/storage": "^5.8.5",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "multer": "^1.4.2",
     "mysql": "^2.18.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "keywords": [],
+  "description": ""
 }

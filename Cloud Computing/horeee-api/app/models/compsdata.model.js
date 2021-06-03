@@ -108,3 +108,4 @@ Compsdata.removeAll = result => {
 };
 
 module.exports = Compsdata;
+

@@ -110,3 +110,4 @@ Fooddata.removeAll = result => {
 };
 
 module.exports = Fooddata;
+

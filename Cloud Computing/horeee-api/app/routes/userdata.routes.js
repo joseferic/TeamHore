@@ -19,3 +19,4 @@ module.exports = app => {
   // Create a new Customer
   app.delete("/userdatas", userdatas.deleteAll);
 };
+
