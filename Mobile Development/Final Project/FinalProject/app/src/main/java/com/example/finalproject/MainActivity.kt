@@ -59,13 +59,13 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnPredict.setOnClickListener {
 //            var resized: Bitmap = Bitmap.createScaledBitmap(bitmap, 224, 224, true)
-            var resized: Bitmap = Bitmap.createScaledBitmap(bitmap, 50, 50, true)
+            var resized: Bitmap = Bitmap.createScaledBitmap(bitmap, 224, 224, true)
             //val model = MobilenetV110224Quant.newInstance(this)
-            val model =  ModelFruit7.newInstance(this)
+            var model =  FruitModel8.newInstance(this)
 
 
             // Creates inputs for reference.
-            val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 50, 50, 3), DataType.FLOAT32)
+            var inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.FLOAT32)
 
 //            val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.UINT8)
 
