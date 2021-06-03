@@ -1,0 +1,131 @@
+apple pink lady
+apple red 1
+apple red 2
+apple red 3
+apple red delicious
+apple red yellow 1
+apple red yellow 2
+apricot
+avocado
+avocado ripe
+banana
+banana lady finger
+banana red
+beetroot
+blueberry
+cactus fruit
+cantaloupe 1
+cantaloupe 2
+carambula
+cauliflower
+cherry 1
+cherry 2
+cherry rainier
+cherry wax black
+cherry wax red
+cherry wax yellow
+chestnut
+clementine
+cocos
+corn
+corn husk
+cucumber ripe
+cucumber ripe 2
+dates
+eggplant
+fig
+ginger root
+granadilla
+grape blue
+grape pink
+grape white
+grape white 2
+grape white 3
+grape white 4
+grapefruit pink
+grapefruit white
+test\guava
+test\hazelnut
+test\huckleberry
+kaki
+kiwi
+kohlrabi
+kumquats
+lemon
+lemon meyer
+limes
+lychee
+mandarine
+mango
+mango red
+mangostan
+maracuja
+melon piel de sapo
+mulberry
+nectarine
+nectarine flat
+nut forest
+nut pecan
+onion red
+onion red peeled
+onion white
+orange
+papaya
+passion fruit
+peach
+peach 2
+peach flat
+pear
+pear 2
+pear abate
+pear forelle
+pear kaiser
+pear monster
+pear red
+pear stone
+pear williams
+pepino
+pepper green
+pepper orange
+pepper red
+pepper yellow
+physalis
+physalis with husk
+pineapple
+pineapple mini
+pitahaya red
+plum
+plum 2
+plum 3
+pomegranate
+pomelo sweetie
+potato red
+potato red washed
+potato sweet
+potato white
+quince
+rambutan
+raspberry
+redcurrant
+salak
+strawberry
+strawberry wedge
+tamarillo
+tangelo
+tomato 1
+tomato 2
+tomato 3
+tomato 4
+tomato cherry red
+tomato heart
+tomato maroon
+tomato not ripened
+tomato yellow
+walnut
+watermelon
+apple braeburn
+apple crimson snow
+apple golden 1
+apple golden 2
+apple golden 3
+apple granny smith
