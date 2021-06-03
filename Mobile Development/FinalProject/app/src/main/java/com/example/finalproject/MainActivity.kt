@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val fileName = "labelmap.txt"
+        val fileName = "labelmaplowercase.txt"
         val inputString = application.assets.open(fileName).bufferedReader().use { it.readText() }
         var listFromLabel = inputString.split("\n")
 
@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnPredict.setOnClickListener {
             var resized: Bitmap = Bitmap.createScaledBitmap(bitmap, 100, 100, true)
             //val model = MobilenetV110224Quant.newInstance(this)
-            var model =  ModelFruit9.newInstance(this)
+            var model =  ModelFruit11.newInstance(this)
 
             // Creates inputs for reference.
             var inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 100, 100, 3), DataType.FLOAT32)
@@ -159,7 +159,7 @@ class MainActivity : AppCompatActivity() {
         var ind = 0
         var min = 0.0f
 
-        for (i in 0 until arr.count() - 1) {
+        for (i in 0 until arr.count() - 1 ) {
             if (arr[i] > min) {
                 ind = i
                 min = arr[i]
