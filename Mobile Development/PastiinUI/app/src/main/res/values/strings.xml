@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pastiin-UI</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="history_tab_text_1">History</string>
+    <string name="history_tab_text_2">Saved</string>
+</resources>
