@@ -14,7 +14,6 @@ exports.create = (req, res) => {
     email_userData: req.body.email_userData,
     password_userData: req.body.password_userData,
     name_userData: req.body.name_userData,
-    id_foodData: req.body.id_foodData,
     allergy_userData: req.body.allergy_userData,
     pref_userData: req.body.pref_userData    
   });

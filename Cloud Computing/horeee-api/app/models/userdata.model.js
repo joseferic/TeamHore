@@ -5,7 +5,6 @@ const Userdata = function(userdata) {
   this.email_userData = userdata.email_userData;
   this.password_userData = userdata.password_userData;
   this.name_userData = userdata.name_userData;
-  this.id_foodData = userdata.id_foodData;
   this.allergy_userData = userdata.allergy_userData;
   this.pref_userData = userdata.pref_userData;
 };
@@ -57,8 +56,8 @@ Userdata.getAll = result => {
 
 Userdata.updateById = (id_userData, userdata, result) => {
   sql.query(
-    "UPDATE userdata SET email_userData = ?, password_userData = ?, name_userData = ?, id_foodData = ?, allergy_userData = ?, pref_userData = ? WHERE id_userData = ?",
-    [userdata.email_userData, userdata.password_userData, userdata.name_userData, userdata.id_foodData, userdata.allergy_userData, userdata.pref_userData, id_userData],
+    "UPDATE userdata SET email_userData = ?, password_userData = ?, name_userData = ?, allergy_userData = ?, pref_userData = ? WHERE id_userData = ?",
+    [userdata.email_userData, userdata.password_userData, userdata.name_userData, userdata.allergy_userData, userdata.pref_userData, id_userData],
     (err, res) => {
       if (err) {
         console.log("error: ", err);

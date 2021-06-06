@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "western-will-312804",
+  "private_key_id": "26911c257c965de384170cb8b30dbd78f30e0166",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC3JMfW33rmIWml\nJ/4BLwOW80FLCkv9WxkiFMF9lOZZ8DoMtrxgc9QovjOWWCCovG9Kz7xjZ3/TqpNF\nv00M5eCzPQWmyP96gJr4vhJHPW1NWqtSa/8sPWB3w+LKzbQP8HgwdY++FuUobg8Z\nmAHbxIMHikhgv+YIdAjJzA5LD2jzm0FSMCHq92cGkoXpm5ePp/QEXytAmvLZWP11\nZUOEshGIFYOP7ip+mhVBptlkXeapZxaPxaT1wxVw01SAZ41+1xk78J6zJoA3A+Fb\nOr6qwdrGJsSceC3wWByyvg20DydGH/yZ37EBwUSpuUdYtKUC91vyuW4qK7XZJd+X\nLQZcDIaxAgMBAAECggEABiTLOWeU0VyElUBCspp3pdwyMAi/5Ndl//EvTn2svo6i\n++MzbY7lKpq600vQiKiNmTZfzPvfW2Po/dl9hbW+dHTTGDW88EiZKkgCB/bFEGe+\nwIyT6lGCx3HATWpaJIC+H24KLOfKtzD9+69QPKWaeanHZMt7NYRi+RYJ0rXJIQbh\nOzbtGvBPfiq0IPYYj6lwBgZgV6gQD2A+lDcet3Z1PxSh5+CYCvgXVYibjiqDkO2n\nqa3nY4B+ipdEVFyN5MIb2gOXVcHA25lxUBzU0/3ZOcH1I5tfRHDrEhBnWH2V0W38\neBxnypZz4f752ut6TjFfrgHWvVv2uLTQRyn7HTyZIQKBgQDmjJFHt+Iha+1W7sNV\ns/KNukexWzaEaZdTeDGLEaToVV1/MDcPOgntwPaqvzMAKI0aIs361e33t3d9kt8y\np1rvoPvs7+Qwy49NrwDLJ/Mb5ODB6rS3Y7uXFCiqo8m/EHIT84ZccPgkYiRU66TH\nDDn1cpXgQJ1vXGbpdFQbLiKISQKBgQDLXIMo7kZrN8MiF/zRWCDL8tRN0YzA8Y4V\nwwP8nf+hElycY527MeqnSM1mKBmF+pEj60zklvei7MppVwsmHWilQOTRRzymPsO1\nyLz03uS6YnIYoupti/MJqvzba3Q9THd7w6YiyXcJhV8NGoX45oiM0vxmlvlV1oT5\ng/0ohP0bKQKBgEhiGbrKoNSdbga9L9bYiG627Ythd9xayogKVIO1JnFLW+9y09aU\nAkoDK26wWPLTyHlMNB9syynbEEj8s9bTdFmH0ZCyQJKRVoytRTKDeHBpi6dWaSaq\nyVrFmX75rX2vTCG3c5fSYBYMOhvvX+yeihPlxeiCYOt1t1nUjBN8iJsBAoGAfwvR\nyQ1rIuqYVsFjqamD+8Y9ykwCwjtmh8PoxrYykH83KmC1ltAth8rcv1iH8YLDkAwd\nYqXKGZgTMFI33dz7lln/WZtGkZmejP/WxKhHfwWnwCpviHapJD4VcEMmQHF4J/Ln\n5M22N1WCN159mizz2/6nvrPNG0pEktlZnCnRMlkCgYEA1q7SGYQeOspzR4U1mMLP\nAjGOhl7y23VPwsc9XfEj0uWIorNTJjlwmFFY9eEEo2bkDgajQLbWjTeZDHwNBWrG\nEoFxwaOGjjHLn+iJv7sm37l7UDVV9MFj/8v9jtPm6HNvTXQ/rR5a/4qJvDhlOW+A\n3O0jvlaJvNRd1JMVlLO4DyA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "product-one-bucket-sample-hore@western-will-312804.iam.gserviceaccount.com",
+  "client_id": "113025776620450710807",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/product-one-bucket-sample-hore%40western-will-312804.iam.gserviceaccount.com"
+}
+
