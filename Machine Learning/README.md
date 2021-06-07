@@ -12,7 +12,8 @@ properties:
  - Image size: 100x100 pixels.
 Filename format: imageindex100.jpg (e.g. 32100.jpg) or rimageindex100.jpg (e.g. r32100.jpg) or r2imageindex100.jpg or r3imageindex100.jpg. "r" stands for rotated fruit. "r2" means that the fruit was rotated around the 3rd axis. "100" comes from image size (100x100 pixels). Different varieties of the same fruit (apple for instance) are stored as belonging to different classes.
 
-# Topic:
+# Goals:
+the goal of our model is how to match the input image with the machine learning model that has been created using the dataset. if the image matches, it will display the name/label of the image type, in which case our label uses the name of the fruit.
 
 # technique used:
  - ImageDataGenerator: For Data Augmentation. It is a technique of creating new data from existing data by applying some transformations such as flips, rotate at a various angle, shifts, zooms and many more. Training the neural network on more data leads to achieving higher accuracy. In real-world problem, we may have limited data. Therefore, data augmentation is often used to increase train dataset. An ImageDataGenerator class function provides a range of transformations such as: Translations, Rotations, Shearing, Changes in scale, Image fliping, and Zooming.
