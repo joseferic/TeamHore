@@ -72,7 +72,7 @@
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toBottomOf="@id/judul"
-          android:background="@drawable/white_radius_card"
+          android:background="@drawable/white_radius_menu_navbar"
           />
 
       <androidx.constraintlayout.widget.ConstraintLayout
@@ -147,7 +147,7 @@
         android:id="@+id/b"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@drawable/white_radius_background"
+        android:background="@drawable/white_radius_menu_header"
         android:elevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

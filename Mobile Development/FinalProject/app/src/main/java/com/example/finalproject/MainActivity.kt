@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val fileName = "labelmaplowercase.txt"
+        val fileName = "label_per_id_fruit.txt"
         val inputString = application.assets.open(fileName).bufferedReader().use { it.readText() }
         var listFromLabel = inputString.split("\n")
 
