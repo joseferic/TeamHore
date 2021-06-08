@@ -28,7 +28,7 @@ class ResultActivity : AppCompatActivity() {
         val bundle = intent.extras
         message = bundle!!.getString("id").toString()
 
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
 
         val repository = Repository()
         val viewModelFactory = MainViewModelFactory(repository)
@@ -47,8 +47,8 @@ class ResultActivity : AppCompatActivity() {
 
                //kalo ada buka fragment success
 
-//               Log.d("Response",responses.body().toString())
-//               Toast.makeText(this, responses.body().toString(), Toast.LENGTH_SHORT).show()
+               Log.d("Response",responses.body().toString())
+
                loadFragment(fragment)
            }
             else{
