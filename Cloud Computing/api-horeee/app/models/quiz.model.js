@@ -2,10 +2,11 @@ const sql = require("./db.js");
 
 // constructor
 const Quiz = function(quiz) {
-  this.id_Fruit = quiz.id_Fruit;
+  this.pict_Quiz = quiz.pict_Quiz;
   this.type_Quiz = quiz.type_Quiz;
+  this.option1_Quiz = quiz.correctanswer_Quiz;
+  this.option2_Quiz = quiz.option2_Quiz;
   this.correctanswer_Quiz = quiz.correctanswer_Quiz;
-  this.wronganswer_Quiz = quiz.wronganswer_Quiz;
 };
 
 Quiz.create = (newContentdata, result) => {
@@ -92,8 +93,8 @@ Quiz.getAll = result => {
 
 Quiz.updateById = (id_Quiz, quiz, result) => {
   sql.query(
-    "UPDATE quiz SET id_Fruit = ?, type_Quiz = ?, correctanswer_Quiz = ?, wronganswer_Quiz = ? WHERE id_Quiz = ?",
-    [quiz.id_Fruit, quiz.type_Quiz, quiz.correctanswer_Quiz, quiz.wronganswer_Quiz, id_Quiz],
+    "UPDATE quiz SET pict_Quiz = ?, type_Quiz = ?, correctanswer_Quiz = ?, option2_Quiz = ?, correctanswer_Quiz = ? WHERE id_Quiz = ?",
+    [quiz.pict_Quiz, quiz.type_Quiz, quiz.correctanswer_Quiz, quiz.option2_Quiz, quiz.correctanswer_Quiz, id_Quiz],
     (err, res) => {
       if (err) {
         console.log("error: ", err);

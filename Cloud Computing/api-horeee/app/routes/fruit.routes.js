@@ -2,7 +2,7 @@ module.exports = app => {
     const fruits = require("../controllers/fruit.controller.js");
   
     // Create a new Fruit
-    app.post("/fruits", fruits.create);
+    //app.post("/fruits", fruits.create);
   
     // Retrieve all Fruits
     app.get("/fruits", fruits.findAll);

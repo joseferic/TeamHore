@@ -11,10 +11,11 @@ exports.create = (req, res) => {
 
   // Create a Quiz
   const trxdata = new Quiz({
-    id_Fruit: req.body.id_Fruit,
+    pict_Quiz: req.body.pict_Quiz,
     type_Quiz: req.body.type_Quiz,
-    correctanswer_Quiz: req.body.correctanswer_Quiz,
-    wronganswer_Quiz: req.body.wronganswer_Quiz
+    option1_Quiz: req.body.option1_Quiz,
+    option2_Quiz: req.body.option2_Quiz,
+    correctanswer_Quiz: req.body.correctanswer_Quiz
   });
 
   // Save Quiz in the database
