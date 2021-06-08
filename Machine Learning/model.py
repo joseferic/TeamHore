@@ -38,34 +38,32 @@ from keras.preprocessing.image import array_to_img, img_to_array, load_img
 test_path = "/content/my_data/fruits-360/Test"
 train_path = "/content/my_data/fruits-360/Training"
 
-img_height, img_width = 56, 56
-
 """
 
 > Image Processing
 
 """
 
+img_height = 56
+img_width = 56
+
 train_ImageGen = ImageDataGenerator(
-    rescale = 1./255
+    rescale = 1./255,
 )
 
 train_data = train_ImageGen.flow_from_directory(directory = train_path,
-                                                target_size = (img_height, img_width ),   
-                                                batch_size = 128,
-                                                shuffle=True,
-                                                color_mode = 'rgb',
-                                                class_mode = 'categorical'
+                                                      target_size = (100, 100),
+                                                     batch_size = 64,
+                                                        shuffle=True,
+                                                       color_mode = 'rgb',
+                                                     class_mode = 'categorical'
 )
 
 valid_datagen = ImageDataGenerator(rescale = 1./255)
 
 test_data = valid_datagen.flow_from_directory(directory = test_path,
-                                              target_size = (img_height, img_width),
-                                              batch_size = 128,
-                                              shuffle=False,
-                                              color_mode = 'rgb',
-                                              class_mode = 'categorical'
+                                                 target_size = (100, 100),
+                                               class_mode = 'categorical'
 )
 
 """
@@ -84,7 +82,6 @@ model.add(Conv2D(32,(3,3),activation='relu'))
 model.add(SpatialDropout2D(0.3))
 model.add(MaxPooling2D(2,2))
 
-
 model.add(Conv2D(64,(3,3),activation='relu'))
 model.add(SpatialDropout2D(0.3))
 model.add(MaxPooling2D(2,2))
@@ -95,11 +92,10 @@ model.add(Dense(262))
 model.add(Dropout(0.5))
 model.add(Dense(131,activation = 'softmax'))
 
-model.summary()
-
 model.compile(loss='categorical_crossentropy',
               optimizer='Adam',
               metrics=['accuracy'])
+model.summary()
 
 early_stop = keras.callbacks.EarlyStopping(
             monitor="val_loss",
@@ -110,14 +106,6 @@ early_stop = keras.callbacks.EarlyStopping(
 
 history = model.fit(train_data, validation_data=test_data, shuffle=True, epochs=30, 
                     verbose=1, workers=3,callbacks = [early_stop])
-
-score = model.evaluate_generator (test_data,verbose=0)
-print("Test loss:", score[0])
-print("Test accuracy:", score[1])
-
-history_frame = pd.DataFrame(history.history)
-history_frame.loc[:, ['loss', 'val_loss']].plot()
-history_frame.loc[:, ['accuracy', 'val_accuracy']].plot();
 
 """
 

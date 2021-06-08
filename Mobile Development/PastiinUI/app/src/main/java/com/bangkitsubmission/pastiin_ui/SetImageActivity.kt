@@ -1,5 +1,4 @@
-package com.example.finalproject
-
+package com.bangkitsubmission.pastiin_ui
 
 import android.Manifest
 import android.app.Activity
@@ -10,23 +9,22 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import android.view.View
 import android.widget.Toast
+
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.canhub.cropper.CropImage
-import com.canhub.cropper.CropImageView
-import com.example.finalproject.databinding.ActivityMainBinding
-import com.example.finalproject.ml.*
+import com.bangkitsubmission.pastiin_ui.databinding.ActivitySetImageBinding
+import com.bangkitsubmission.pastiin_ui.ml.ModelFruit11
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 
+class SetImageActivity : AppCompatActivity() {
 
-class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivitySetImageBinding
 
     lateinit var bitmap: Bitmap
-
 
     companion object {
         private const val CAMERA_PERMISSION_CODE = 1
@@ -37,9 +35,15 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(R.layout.activity_set_image)
+
+        binding = ActivitySetImageBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val fileName = "label_per_id_fruit.txt"
+        binding.imageView.setClipToOutline(true)
+        binding.after.visibility = View.INVISIBLE
+        binding.before.visibility = View.VISIBLE
+
+        val fileName = "labelmap_after_simplified.txt"
         val inputString = application.assets.open(fileName).bufferedReader().use { it.readText() }
         var listFromLabel = inputString.split("\n")
 
@@ -74,7 +78,17 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        binding.btnPredict.setOnClickListener {
+        binding.btnGallery.setOnClickListener {
+            var intent = Intent(Intent.ACTION_GET_CONTENT)
+            intent.type = "image/*"
+
+            startActivityForResult(intent,100)
+        }
+        binding.btnback.setOnClickListener {
+            binding.after.visibility = View.INVISIBLE
+            binding.before.visibility = View.VISIBLE
+        }
+        binding.btnpredict.setOnClickListener {
             var resized: Bitmap = Bitmap.createScaledBitmap(bitmap, 100, 100, true)
             //val model = MobilenetV110224Quant.newInstance(this)
             var model =  ModelFruit11.newInstance(this)
@@ -99,19 +113,11 @@ class MainActivity : AppCompatActivity() {
 
             var max = getMaxIndex(outputFeature0.floatArray)
 
-            binding.resultText.setText(listFromLabel[max])
+            binding.textView.setText(listFromLabel[max])
 
             // Releases model resources if no longer used.
             model.close()
         }
-
-        binding.btnGallery.setOnClickListener {
-            var intent = Intent(Intent.ACTION_GET_CONTENT)
-            intent.type = "image/*"
-
-            startActivityForResult(intent,100)
-        }
-
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
@@ -135,25 +141,30 @@ class MainActivity : AppCompatActivity() {
                 bitmap = image.copy(Bitmap.Config.ARGB_8888, true)
                 //var uri:Uri? = data?.data
                 //bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver,uri)
-                binding.showImage.setImageBitmap(image)
-                binding.showImage.setClipToOutline(true)
+                binding.imageView.setImageBitmap(image)
+
             }
         }
-        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE){
-            val result: CropImage.ActivityResult? = CropImage.getActivityResult(data)
-            if (resultCode == RESULT_OK) {
-                val cropUri = result?.uriContent
-                bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, cropUri)
-                binding.showImage.setImageURI(cropUri)
-            } else {
-                Log.d("image", "error")
-            }
-        }
+
+//        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE){
+//            val result: CropImage.ActivityResult? = CropImage.getActivityResult(data)
+//            if (resultCode == RESULT_OK) {
+//                val cropUri = result?.uriContent
+//                bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, cropUri)
+//                binding.imageView.setImageURI(cropUri)
+//            } else {
+//                Log.d("image", "error")
+//            }
+//        }
+
         if (requestCode == GALERY){
-            binding.showImage.setImageURI(data?.data)
+            binding.imageView.setImageURI(data?.data)
             var uri = data?.data
             bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver,uri)
         }
+        binding.imageView.setClipToOutline(true)
+        binding.before.visibility = View.INVISIBLE
+        binding.after.visibility = View.VISIBLE
     }
 
     fun getMaxIndex(arr: FloatArray): Int {
@@ -169,9 +180,8 @@ class MainActivity : AppCompatActivity() {
         return ind
     }
 
-    private fun startCropActivity() {
-        CropImage.activity().setAspectRatio(8, 8).setGuidelines(CropImageView.Guidelines.ON)
-            .start(this)
-    }
-
+//    private fun startCropActivity() {
+//        CropImage.activity().setAspectRatio(8, 8).setGuidelines(CropImageView.Guidelines.ON)
+//            .start(this)
+//    }
 }

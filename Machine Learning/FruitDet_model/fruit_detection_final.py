@@ -53,14 +53,13 @@ from keras.preprocessing.image import array_to_img, img_to_array, load_img
 test_path = "/content/my_data/fruits-360/Test"
 train_path = "/content/my_data/fruits-360/Training"
 
-img_height = 56
-img_width = 56
-
 """
 
 > Image Processing
 
 """
+img_height = 56
+img_width = 56
 
 train_ImageGen = ImageDataGenerator(
     rescale = 1./255,

@@ -14,10 +14,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [UserFragment.newInstance] factory method to
+ * Use the [ResultFragment_Failed.newInstance] factory method to
  * create an instance of this fragment.
  */
-class UserFragment : Fragment() {
+class ResultFragment_Failed : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,7 +35,7 @@ class UserFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_user, container, false)
+        return inflater.inflate(R.layout.fragment_result__failed, container, false)
     }
 
     companion object {
@@ -45,12 +45,12 @@ class UserFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment UserFragment.
+         * @return A new instance of fragment ResultFragment_Failed.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            UserFragment().apply {
+            ResultFragment_Failed().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
