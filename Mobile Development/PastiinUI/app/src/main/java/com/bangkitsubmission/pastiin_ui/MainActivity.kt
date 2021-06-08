@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import com.bangkitsubmission.pastiin_ui.Fragment.CompositionFragment
 import com.bangkitsubmission.pastiin_ui.Fragment.HistoryFragment
 import com.bangkitsubmission.pastiin_ui.Fragment.HomeFragment
-import com.bangkitsubmission.pastiin_ui.Fragment.UserFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener   {
@@ -18,11 +17,13 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         setContentView(R.layout.activity_main)
         val actionBar: ActionBar? = supportActionBar
         actionBar?.hide()
-
-        loadFragment(HomeFragment())
-
         var btnnav: BottomNavigationView = findViewById(R.id.btnnavview)
+        btnnav.setSelectedItemId(R.id.home_menu);
+        loadFragment(HomeFragment())
         btnnav.setOnNavigationItemSelectedListener(this)
+
+
+
     }
 
     private fun loadFragment(localfragment: Fragment?): Boolean {
@@ -38,10 +39,9 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         var localfragment: Fragment? = null
         when(item.itemId){
-            R.id.home_menu -> localfragment = HomeFragment()
             R.id.composition_menu-> localfragment = CompositionFragment()
+            R.id.home_menu -> localfragment = HomeFragment()
             R.id.history_menu-> localfragment = HistoryFragment()
-            R.id.profile_menu-> localfragment = UserFragment()
         }
 
        return loadFragment(localfragment)

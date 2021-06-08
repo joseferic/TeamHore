@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightgrey"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <FrameLayout
@@ -19,15 +19,17 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/btnnavview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:layout_gravity="bottom"
-        android:background="@drawable/blue_radius_background"
-        android:elevation="2dp"
-        app:itemIconTint="@drawable/btn_state"
+        android:background="@drawable/white_radius_menu_navbar"
+        android:elevation="5dp"
         app:itemTextColor="@drawable/btn_state"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@drawable/btn_state"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu_items" />
+        app:menu="@menu/menu_items"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
