@@ -23,6 +23,6 @@ module.exports = app => {
     // app.delete("/quizzes/:id_Quiz", quizzes.delete);
   
     // Create a new Customer
-    // app.delete("/quizzes", quizzes.deleteAll);
+    // app.delete("/quizzes", quizzes.deleteAll);s
   };
   
