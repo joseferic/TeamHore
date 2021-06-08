@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         val actionBar: ActionBar? = supportActionBar
         actionBar?.hide()
         var btnnav: BottomNavigationView = findViewById(R.id.btnnavview)
-        btnnav.setSelectedItemId(R.id.home_menu);
+        btnnav.setSelectedItemId(R.id.home_menu)
         loadFragment(HomeFragment())
         btnnav.setOnNavigationItemSelectedListener(this)
 

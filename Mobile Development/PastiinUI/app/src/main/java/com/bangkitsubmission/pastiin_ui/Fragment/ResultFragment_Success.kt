@@ -5,56 +5,58 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
 import com.bangkitsubmission.pastiin_ui.R
+import com.bumptech.glide.Glide
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Result_Success.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Result_Success : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        var v = inflater.inflate(R.layout.fragment_result__success, container, false)
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_result__success, container, false)
+
+
+        var img = v.findViewById<ImageView>(R.id.resultimageplaceholder)
+        var name = v.findViewById<TextView>(R.id.SensitivityResult)
+        var desc = v.findViewById<TextView>(R.id.DescriptionLabel)
+
+        Glide.with(this)
+            .load(arguments?.getString(ARG_PICTURE))
+            .into(img)
+        img.setClipToOutline(true)
+
+        name.text = arguments?.getString(ARG_FRUITS)
+        desc.text = arguments?.getString(ARG_DESC)
+        return v
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Result_Success.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            Result_Success().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+       const val ARG_FRUITS = "THIS DATA"
+        const val ARG_DESC = "THAT DATA"
+        const val ARG_PICTURE = "THOSE DATA"
+        fun newInstance(a: String, b: String, c: String): Result_Success {
+            val fragment = Result_Success()
+
+            val bundle = Bundle().apply {
+                putString(ARG_FRUITS, a)
+                putString(ARG_DESC, b)
+                putString(ARG_PICTURE, c)
             }
+            fragment.arguments = bundle
+
+            return fragment
+        }
     }
 }

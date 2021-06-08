@@ -43,7 +43,7 @@ class SetImageActivity : AppCompatActivity() {
         binding.after.visibility = View.INVISIBLE
         binding.before.visibility = View.VISIBLE
 
-        val fileName = "labelmap_after_simplified.txt"
+        val fileName = "label_per_id_fruit.txt"
         val inputString = application.assets.open(fileName).bufferedReader().use { it.readText() }
         var listFromLabel = inputString.split("\n")
 
@@ -113,10 +113,13 @@ class SetImageActivity : AppCompatActivity() {
 
             var max = getMaxIndex(outputFeature0.floatArray)
 
-            binding.textView.setText(listFromLabel[max])
+            binding.textView.setText(listFromLabel[max])// ini jadiin kirim ke result sebelah
 
+            var intent = Intent(this, ResultActivity::class.java)
+            intent.putExtra("id",listFromLabel[max])
             // Releases model resources if no longer used.
             model.close()
+            startActivity(intent)
         }
     }
 

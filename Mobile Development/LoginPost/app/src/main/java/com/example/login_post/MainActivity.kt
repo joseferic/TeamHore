@@ -32,19 +32,19 @@ class MainActivity : AppCompatActivity() {
         val repository = Repository()
         val viewModelFactory = MainViewModelFactory(repository)
         viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
-//        viewModel.getCompDatas()
-//        viewModel.myResponse.observe(this, Observer { responses ->
-//           if (responses.isSuccessful){
-//               Log.d("Response",responses.body()?.id_compsData.toString())
-//               Log.d("Response",responses.body()?.id_foodData.toString())
-//               Log.d("Response",responses.body()?.name_compsData!!)
-//               binding.namaBahanMakanan.setText(responses.body()?.name_compsData!!)
-//               Log.d("Response",responses.body()?.desc_compsData!!)
-//           }
-//            else{
-//                Log.d("Response",responses.errorBody().toString())
-//            }
-//        })
+        viewModel.getCompDatas()
+        viewModel.myResponse.observe(this, Observer { responses ->
+           if (responses.isSuccessful){
+               Log.d("Response",responses.body()?.id_compsData.toString())
+               Log.d("Response",responses.body()?.id_foodData.toString())
+               Log.d("Response",responses.body()?.name_compsData!!)
+               binding.namaBahanMakanan.setText(responses.body()?.name_compsData!!)
+               Log.d("Response",responses.body()?.desc_compsData!!)
+           }
+            else{
+                Log.d("Response",responses.errorBody().toString())
+            }
+        })
 
 /*        viewModel.getListCompDatas()
         viewModel.myListResponse.observe(this, Observer { response ->
