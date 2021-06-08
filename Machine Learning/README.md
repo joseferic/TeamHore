@@ -61,7 +61,7 @@ the goal of our model is how to match the input image with the machine learning 
    ![image](https://user-images.githubusercontent.com/80331973/121186342-32060300-c891-11eb-8735-47f9d6310f73.png)
 
 # Summary:
-In general, the model that we have created can predict the added image well and is quite accurate. the results of the accuracy test and the loss test on the OCR reached 0.059100549668073654 and 0.9830999970436096, respectively, which were good. While the fruit detector, the results of the accuracy test and the loss test were able to reach 0.33575233817100525 and 0.9466678500175476, respectively.
+In general, the model that we have created can predict the added image well and is quite accurate. The results of the test accuracy and the test loss on the OCR reached 0.059100549668073654 and 0.9830999970436096, respectively, which were good. On the other hand, the fruit detector, the results of the test accuracy and the test loss were able to reach 0.33575233817100525 and 0.9466678500175476, respectively.
 
- - Testing numbers in this experiment using images of random numbers from 1 to 9 taken from google in jpg/jpeg/png format and with the criteria of number images without a background can provide quite satisfactory prediction results.
- - Testing fruit images in this experiment using fruit images taken randomly on a dataset that has been sorted (test dataset) or taken from google in jpg/jpeg/png format and with the criteria of fruit images without a background can give quite satisfactory predictive results.
+ - Testing numbers in this experiment using images of random numbers from 1 to 9 taken from google in jpg/jpeg/png format and with the criteria of number images without background can give quite satisfactory prediction results.
+ - Testing fruit images in this experiment using fruit images taken at random on a dataset that has been sorted (test dataset) or taken from google in jpg/jpeg/png format and with the criteria of fruit images without background can give quite satisfactory prediction results.
