@@ -13,44 +13,67 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         >
+
         <TextView
             android:id="@+id/Sad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:text=":("
+            android:textColor="@color/white"
             android:textSize="100dp"
             android:textStyle="bold"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@color/white"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/Sorry"
             app:layout_constraintLeft_toLeftOf="parent"
-            />
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/Sorry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sorry"
+            android:layout_marginTop="16dp"
+            android:text="Sorry, We Can't Find Your Fruit"
+            android:textColor="@color/white"
             android:textSize="18dp"
             android:textStyle="bold"
-            android:layout_marginTop="0dp"
-            app:layout_constraintTop_toBottomOf="@id/Sad"
-            android:textColor="@color/white"
-            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Sad" />
 
-            />
-        <TextView
-            android:id="@+id/Sorry2"
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnback"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="I think there might be a problem"
-            android:textSize="12dp"
-            android:layout_marginTop="0dp"
-            app:layout_constraintTop_toBottomOf="@id/Sorry"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:textColor="@color/white"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/white_radius_button"
+            android:fontFamily="sans-serif-black"
+            android:text="find other picture"
+            android:textColor="@color/lightorange"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnhome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Sorry"
+            android:elevation="5dp"
             />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnhome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/white_radius_button"
+            android:backgroundTint="@color/lightorange"
+            android:fontFamily="sans-serif-black"
+            android:text="back to home"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnback" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
