@@ -1,5 +1,6 @@
 package com.example.login_post.kuis
 
+<<<<<<< HEAD
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -12,18 +13,29 @@ import com.example.login_post.kuis.type.MultipleChoice
 import com.example.login_post.viewmodel.MainViewModel
 import com.example.login_post.viewmodel.MainViewModelFactory
 import com.example.repository.Repository
+=======
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.example.login_post.R
+import com.example.login_post.databinding.ActivityMainBinding
+import com.example.login_post.databinding.ActivityQuizBinding
+>>>>>>> fd3f7db4bec5c4841241e4d8880c063839931dc2
 
 class Quiz : AppCompatActivity() {
 
     private lateinit var binding: ActivityQuizBinding
+<<<<<<< HEAD
     private lateinit var viewModel: MainViewModel
     private lateinit var listQuiz : List<Quizzes>
+=======
+>>>>>>> fd3f7db4bec5c4841241e4d8880c063839931dc2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityQuizBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+<<<<<<< HEAD
         //window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
         val repository = Repository()
@@ -102,5 +114,9 @@ class Quiz : AppCompatActivity() {
             listQuizByType = listQuizTypeTebakAngka
         }
         return listQuizByType
+=======
+
+
+>>>>>>> fd3f7db4bec5c4841241e4d8880c063839931dc2
     }
 }

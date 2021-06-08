@@ -17,12 +17,12 @@ module.exports = app => {
     // app.get("/quizzes/bb/:type_Quiz", quizzes.findBb);     
 
     // Update a Customer with id_Quiz
-    // app.put("/quizzes/:id_Quiz", quizzes.update);
+    // app.put("/quizzes/:id_Quiz", quizzes.update);j
   
     // Delete a Customer with id_Quiz
     // app.delete("/quizzes/:id_Quiz", quizzes.delete);
   
     // Create a new Customer
-    // app.delete("/quizzes", quizzes.deleteAll);
+    // app.delete("/quizzes", quizzes.deleteAll);s
   };
   

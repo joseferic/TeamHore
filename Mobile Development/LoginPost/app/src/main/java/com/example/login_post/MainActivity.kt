@@ -76,11 +76,19 @@ class MainActivity : AppCompatActivity() {
             viewModel.getListUserDatas()
             viewModel.myListUserDataResponse.observe(this, Observer { response->
                 if (response.isSuccessful){
+<<<<<<< HEAD
                     var userListDataBase = response.body()
                     var DatanyaAda : Boolean = false
                     Log.d("userDatabase",userListDataBase.toString())
                     for (i in userListDataBase!!.indices){
                         var userDatabase = userListDataBase[i]
+=======
+                    var UserListDataBase = response.body()
+                    var DatanyaAda : Boolean = false
+                    Log.d("userDatabase",UserListDataBase.toString())
+                    for (i in UserListDataBase!!.indices){
+                        var userDatabase = UserListDataBase[i]
+>>>>>>> fd3f7db4bec5c4841241e4d8880c063839931dc2
                         Log.d("userDatabase",userDatabase.toString())
                         if (testUser.email_User == userDatabase.email_User && testUser.pass_User == userDatabase.pass_User){
                             Log.d("userDatabase",userDatabase.toString())

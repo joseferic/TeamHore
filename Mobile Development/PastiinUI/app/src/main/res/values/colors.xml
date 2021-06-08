@@ -10,5 +10,7 @@
     <color name="neon">#37D28D</color>
     <color name="grey">#809BBE</color>
     <color name="lightgrey">#E1E8EF</color>
+    <color name="lightblue">#4FA4FF</color>
+    <color name="lightorange">#FF644F</color>
 
 </resources>

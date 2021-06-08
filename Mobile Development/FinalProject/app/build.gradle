@@ -91,5 +91,4 @@ dependencies {
 
     api 'com.google.android.material:material:1.4.0-alpha01'
 
-    implementation 'com.github.CanHub:Android-Image-Cropper:3.1.1'
 }

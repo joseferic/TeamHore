@@ -24,8 +24,11 @@ class Repository {
         return RetrofitInstance.api.getListUserData()
     }
 
+<<<<<<< HEAD
     suspend fun getListQuiz(): Response<List<Quizzes>>{
         return RetrofitInstance.api.getListQuiz()
     }
 
+=======
+>>>>>>> fd3f7db4bec5c4841241e4d8880c063839931dc2
 }
