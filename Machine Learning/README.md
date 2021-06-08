@@ -1,6 +1,15 @@
 # Machine Learning Div:
 Riefky Arif Ibrahim M0101084 and Suci Ananda Sholihat M1721795
 
+# table of contents
+  1. 1
+  2. 2
+  3. 3
+  4. 4
+  5. 5
+  6. 6
+  7. 7
+
 # Dataset source (Fruit):
 https://www.kaggle.com/moltean/fruits
 
