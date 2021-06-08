@@ -11,18 +11,18 @@ module.exports = app => {
     app.get("/quizzes/:id_Quiz", quizzes.findOne);
     
     // Retrieve a single Customer with id_Quiz
-    app.get("/quizzes/pg/:type_Quiz", quizzes.findPg);
+    app.get("/quizzes/type/:type_Quiz", quizzes.findPg);
 
     // Retrieve a single Customer with id_Quiz
-    app.get("/quizzes/bb/:type_Quiz", quizzes.findBb);     
+    // app.get("/quizzes/bb/:type_Quiz", quizzes.findBb);     
 
     // Update a Customer with id_Quiz
-    app.put("/quizzes/:id_Quiz", quizzes.update);
+    // app.put("/quizzes/:id_Quiz", quizzes.update);
   
     // Delete a Customer with id_Quiz
-    app.delete("/quizzes/:id_Quiz", quizzes.delete);
+    // app.delete("/quizzes/:id_Quiz", quizzes.delete);
   
     // Create a new Customer
-    app.delete("/quizzes", quizzes.deleteAll);
+    // app.delete("/quizzes", quizzes.deleteAll);
   };
   

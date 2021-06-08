@@ -57,7 +57,7 @@ exports.findOne = (req, res) => {
   });
 };
 
-// Find a single Quiz with a id_Quiz
+// Find a single Quiz with a type_Quiz
 exports.findPg = (req, res) => {
   Quiz.findByPg(req.params.type_Quiz, (err, data) => {
     if (err) {
@@ -74,22 +74,6 @@ exports.findPg = (req, res) => {
   });
 };
 
-// Find a single Quiz with a id_Quiz
-exports.findBb = (req, res) => {
-  Quiz.findByBb(req.params.type_Quiz, (err, data) => {
-    if (err) {
-      if (err.kind === "not_found") {
-        res.status(404).send({
-          message: `Not found Quiz with type_Quiz ${req.params.type_Quiz}.`
-        });
-      } else {
-        res.status(500).send({
-          message: "Error retrieving Quiz with type_Quiz " + req.params.type_Quiz
-        });
-      }
-    } else res.send(data);
-  });
-};
 // Update a Quiz identified by the id_Quiz in the request
 exports.update = (req, res) => {
   // Validate Request

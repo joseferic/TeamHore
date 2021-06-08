@@ -14,9 +14,9 @@ module.exports = app => {
   app.put("/users/:id_User", users.update);
 
   // Delete a Customer with id_User
-  app.delete("/users/:id_User", users.delete);
+  // app.delete("/users/:id_User", users.delete);
 
   // Create a new Customer
-  app.delete("/users", users.deleteAll);
+  // app.delete("/users", users.deleteAll);
 };
 

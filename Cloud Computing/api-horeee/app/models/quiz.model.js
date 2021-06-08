@@ -49,12 +49,12 @@ Quiz.findByPg = (type_Quiz, result) => {
     }
 
     if (res.length) {
-      console.log("found quiz: ", res[0]);
-      result(null, res[0]);
+      console.log("quiz: ", res);
+      result(null, res);
       return;
     }
 
-    // not found Quiz with the id_Quiz
+    // not found Quizhistory with the type_Quiz
     result({ kind: "not_found" }, null);
   });
 };
