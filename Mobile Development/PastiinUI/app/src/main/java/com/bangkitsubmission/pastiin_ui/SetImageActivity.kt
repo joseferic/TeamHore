@@ -96,10 +96,6 @@ class SetImageActivity : AppCompatActivity() {
             // Creates inputs for reference.
             var inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 100, 100, 3), DataType.FLOAT32)
 
-//            val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.UINT8)
-
-            //var inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.FLOAT32)
-//            var tbuffer = TensorImage.fromBitmap(resized)
             var tensorImage = TensorImage(DataType.FLOAT32)
             tensorImage.load(resized)
 
