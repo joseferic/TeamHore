@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.login_post.adapter.Adapter
 import com.example.login_post.databinding.ActivityMainBinding
+import com.example.login_post.model.UserDatas
 import com.example.login_post.viewmodel.MainViewModel
 import com.example.login_post.viewmodel.MainViewModelFactory
 import com.example.repository.Repository
@@ -29,8 +30,8 @@ class MainActivity : AppCompatActivity() {
         setupRecyclerview()
 
         val repository = Repository()
-        val viewModelFactory =  MainViewModelFactory(repository)
-        viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java )
+        val viewModelFactory = MainViewModelFactory(repository)
+        viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
 //        viewModel.getCompDatas()
 //        viewModel.myResponse.observe(this, Observer { responses ->
 //           if (responses.isSuccessful){
@@ -44,19 +45,69 @@ class MainActivity : AppCompatActivity() {
 //                Log.d("Response",responses.errorBody().toString())
 //            }
 //        })
-        viewModel.getListCompDatas()
-        viewModel.myListResponse.observe(this,Observer{response->
-            if (response.isSuccessful){
+
+/*        viewModel.getListCompDatas()
+        viewModel.myListResponse.observe(this, Observer { response ->
+            if (response.isSuccessful) {
                 response.body()?.let { Myadapter.setData(it) }
+            } else {
+                Log.d("Response List Error", response.errorBody().toString())
             }
-            else{
-                Log.d("Response",response.errorBody().toString())
-            }
-        })
+        })*/
+
+        binding.btnRegister.setOnClickListener {
+            val test = UserDatas("Sparkling Knights", "klee@gmail.com", "bombombakudan")
+            var resultUserName = "Masih null sep"
+            viewModel.pushDataUser(test)
+            viewModel.myPushUserData.observe(this, { response ->
+                Log.d("Response", response.body().toString())
+                Log.d("Response", response.code().toString())
+                Log.d("Response", response.message().toString())
+                resultUserName = response.body()!!.name_User
+                binding.namaBahanMakanan.setText("Nama user nya adalah " + resultUserName)
+            })
+        }
+
+        binding.btnLogin.setOnClickListener{
+            val testUserRegistered = UserDatas("Sparkling Knights", "klee@gmail.com", "bombombakudan")
+            val testUserNotRegistered = UserDatas("Xiao the Vigilant Yaksha","xiao@gmail.com","kiero")
+
+            val testUser = testUserNotRegistered
+            viewModel.getListUserDatas()
+            viewModel.myListUserDataResponse.observe(this, Observer { response->
+                if (response.isSuccessful){
+                    var userListDataBase = response.body()
+                    var DatanyaAda : Boolean = false
+                    Log.d("userDatabase",userListDataBase.toString())
+                    for (i in userListDataBase!!.indices){
+                        var userDatabase = userListDataBase[i]
+                        Log.d("userDatabase",userDatabase.toString())
+                        if (testUser.email_User == userDatabase.email_User && testUser.pass_User == userDatabase.pass_User){
+                            Log.d("userDatabase",userDatabase.toString())
+                            DatanyaAda = true
+                        }
+                        else{
+                            Log.d("userDatabase",userDatabase.toString())
+                        }
+                    }
+                    displayToastForDebug(DatanyaAda)
+                }
+            })
+        }
+
     }
 
-    private fun setupRecyclerview(){
+    private fun displayToastForDebug(ada: Boolean){
+        if (ada==true){
+            Toast.makeText(this, "Login Berhasil", Toast.LENGTH_LONG).show()
+        }
+        else{
+            Toast.makeText(this, "Login Gagal", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private fun setupRecyclerview() {
         binding.rvBahanBahanMakanan.adapter = Myadapter
-        binding.rvBahanBahanMakanan.layoutManager  = LinearLayoutManager(this)
+        binding.rvBahanBahanMakanan.layoutManager = LinearLayoutManager(this)
     }
 }

@@ -3,7 +3,9 @@ package com.example.login_post.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.login_post.kuis.Quizzes
 import com.example.login_post.model.CompDatas
+import com.example.login_post.model.UserDatas
 import com.example.repository.Repository
 import kotlinx.coroutines.launch
 import retrofit2.Response
@@ -13,7 +15,14 @@ class MainViewModel(private val repository: Repository): ViewModel() {
     val myResponse: MutableLiveData<Response<CompDatas>> = MutableLiveData()
     val myListResponse: MutableLiveData<Response<List<CompDatas>>> = MutableLiveData()
 
+    val myPushUserData: MutableLiveData<Response<UserDatas>> = MutableLiveData()
 
+    fun pushDataUser(userDatas: UserDatas) {
+        viewModelScope.launch {
+            val response = repository.pushUserData(userDatas)
+            myPushUserData.value = response
+        }
+    }
 
     fun getCompDatas(){
         viewModelScope.launch {
@@ -28,4 +37,23 @@ class MainViewModel(private val repository: Repository): ViewModel() {
             myListResponse.value = response
         }
     }
+
+    val myListUserDataResponse: MutableLiveData<Response<List<UserDatas>>> = MutableLiveData()
+
+    fun getListUserDatas(){
+        viewModelScope.launch {
+            val response = repository.getListUserDatas()
+            myListUserDataResponse.value = response
+        }
+    }
+
+    val myListQuizResponse: MutableLiveData<Response<List<Quizzes>>> = MutableLiveData()
+
+    fun getListQuiz(){
+        viewModelScope.launch {
+            val response = repository.getListQuiz()
+            myListQuizResponse.value = response
+        }
+    }
+
 }
