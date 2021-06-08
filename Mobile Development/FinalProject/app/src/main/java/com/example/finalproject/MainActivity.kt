@@ -23,10 +23,10 @@ import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
 
     lateinit var bitmap: Bitmap
+
 
     companion object {
         private const val CAMERA_PERMISSION_CODE = 1
@@ -136,6 +136,7 @@ class MainActivity : AppCompatActivity() {
                 //var uri:Uri? = data?.data
                 //bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver,uri)
                 binding.showImage.setImageBitmap(image)
+                binding.showImage.setClipToOutline(true)
             }
         }
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE){

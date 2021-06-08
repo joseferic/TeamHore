@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:background="@drawable/white_radius_menu_navbar"
+    android:background="@drawable/white_radius_card"
     android:elevation="2dp"
     android:layout_marginLeft="32dp"
     android:layout_marginRight="32dp"
@@ -12,8 +12,6 @@
     >
 
     <ImageView
-
-
         android:id="@+id/image_scanned"
         android:layout_width="72dp"
         android:layout_height="72dp"
@@ -24,7 +22,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/image_scanned"
+        android:src="@drawable/fikih"
         android:background="@drawable/white_radius_menu_navbar"
          />
 

@@ -20,35 +20,43 @@
         app:layout_constraintVertical_bias="0.0"
         tools:visibility="visible">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button1"
             android:layout_width="0dp"
-            android:layout_height="155dp"
+            android:layout_height="0dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/orange_radius_background"
-            android:text="Button"
+            android:fontFamily="sans-serif-black"
+            android:text="What Fruit Is It?"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toTopOf="@+id/button2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/header"
+            app:layout_constraintTop_toBottomOf="@+id/header" />
 
-            />
-
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button2"
             android:layout_width="0dp"
-            android:layout_height="155dp"
+            android:layout_height="0dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
+            android:layout_marginBottom="151dp"
             android:background="@drawable/blue_radius_background"
-            android:text="Button"
+            android:fontFamily="sans-serif-black"
+            android:text="Play The Quiz!"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button1"
-
-            />
+            app:layout_constraintTop_toBottomOf="@+id/button1" />
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/header"
             android:layout_width="match_parent"
@@ -106,7 +114,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Halo, Apa Kabarmu"
+                    android:text="Hello, How are You"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
