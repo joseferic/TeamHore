@@ -25,36 +25,12 @@ the goal of our model is how to match the input image with the machine learning 
 # Problems:
 Our application has not been able to integrate the feature of counting fruit by writing numbers and there are still many features that have not been embedded in our application, such as games features, learning to write letters, allergy detection, and others. However, this problem seems to be easily solved because it is only constrained by a very short processing time.
 
-# Results:
- - Digit (OCR)
+# App Appearance:
+ - Tampilan Login
+    ![image](https://user-images.githubusercontent.com/80331973/121385638-7cf84700-c973-11eb-97de-90344630cde9.png)
+    
+    ![image](https://user-images.githubusercontent.com/80331973/121385668-841f5500-c973-11eb-8e3b-b7ff6b77c5e8.png)
 
-   Model Accuracy:
-   
-   ![image](https://user-images.githubusercontent.com/80331973/121185949-c6bc3100-c890-11eb-8072-9ff6dca0c63d.png)
-   
-   image input:
-   
-   ![image](https://user-images.githubusercontent.com/80331973/121185761-9aa0b000-c890-11eb-805c-647216697fc1.png)
-   
-   image prediction:
-   
-   ![image](https://user-images.githubusercontent.com/80331973/121185865-b2783400-c890-11eb-81a2-e0c1b236d152.png)
-
- - Fruit Detection
-
-   Model Accuracy: 
-   
-   ![image](https://user-images.githubusercontent.com/80331973/121186154-fc611a00-c890-11eb-821d-1f0cf17c5f30.png)
-   
-   ![image](https://user-images.githubusercontent.com/80331973/121186396-3fbb8880-c891-11eb-985d-09b8c0d18337.png)
-
-   Image input:
-   
-   ![image](https://user-images.githubusercontent.com/80331973/121186281-20bcf680-c891-11eb-87d1-b4c38edfef4a.png)
-
-   Image prediction:
-   
-   ![image](https://user-images.githubusercontent.com/80331973/121186342-32060300-c891-11eb-8735-47f9d6310f73.png)
 
 # Summary:
 In general, the model that we have created can predict the added image well and is quite accurate. The results of the test accuracy and the test loss on the OCR reached 0.059100549668073654 and 0.9830999970436096, respectively, which were good. On the other hand, the fruit detector, the results of the test accuracy and the test loss were able to reach 0.33575233817100525 and 0.9466678500175476, respectively.
@@ -62,8 +38,6 @@ In general, the model that we have created can predict the added image well and 
  - Testing numbers in this experiment using images of random numbers from 1 to 9 taken from google in jpg/jpeg/png format and with the criteria of number images without background can give quite satisfactory prediction results.
  - Testing fruit images in this experiment using fruit images taken at random on a dataset that has been sorted (test dataset) or taken from google in jpg/jpeg/png format and with the criteria of fruit images without background can give quite satisfactory prediction results.
 
-
-# Machine Learning Path: Fikih Firmansyah C3192855 and Arifatul Khasanah C2832609
 # Agenda:
  -  Make Restful API with App Engine to connect ML and Android.
 ![console cloud google com_appengine_authuser=2 organizationId=112315058424 project=western-will-312804 serviceId=default](https://user-images.githubusercontent.com/54542591/121374228-eecb9300-c969-11eb-9646-f8e6010cd57f.png)
