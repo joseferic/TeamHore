@@ -27,9 +27,8 @@ Our application has not been able to integrate the feature of counting fruit by 
 
 # App Appearance:
  - Tampilan Login
-    <img src="https://user-images.githubusercontent.com/80331973/121385638-7cf84700-c973-11eb-97de-90344630cde9.png" width="200">
-    
-    <img src="https://user-images.githubusercontent.com/80331973/121385668-841f5500-c973-11eb-8e3b-b7ff6b77c5e8.png" width="200">
+ -
+    <img src="https://user-images.githubusercontent.com/80331973/121385638-7cf84700-c973-11eb-97de-90344630cde9.png" width="200"> <img src="https://user-images.githubusercontent.com/80331973/121385668-841f5500-c973-11eb-8e3b-b7ff6b77c5e8.png" width="200">
 
 
 # Summary:
