@@ -28,4 +28,7 @@ interface Api {
 
     @GET("fruits/{message}")
     suspend fun getFruitData(@Path(value = "message", encoded = true)message: String) : Response<FruitDatas>
+
+    @GET("fruits")
+    suspend fun getListFruitData(): Response<List<FruitDatas>>
 }

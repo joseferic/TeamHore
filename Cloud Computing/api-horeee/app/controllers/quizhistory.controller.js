@@ -11,10 +11,11 @@ exports.create = (req, res) => {
 
   // Create a Quizhistory
   const quizhistory = new Quizhistory({
+    timestamp_quizHistory: req.body.timestamp_quizHistory,
     id_Quiz: req.body.id_Quiz,
     id_User: req.body.id_User,
-    timestamp_quizHistory: req.body.timestamp_quizHistory,
-    result_quizHistory: req.body.result_quizHistory
+    type_Quiz: req.body.type_Quiz,
+    score_quizHistory: req.body.score_quizHistory
   });
 
   // Save Quizhistory in the database

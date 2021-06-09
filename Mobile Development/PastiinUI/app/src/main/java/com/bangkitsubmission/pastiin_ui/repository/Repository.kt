@@ -28,4 +28,8 @@ class Repository {
         return RetrofitInstance.api.getFruitData(message)
     }
 
+    suspend fun getListFruit(): Response<List<FruitDatas>>{
+        return RetrofitInstance.api.getListFruitData()
+    }
+
 }
