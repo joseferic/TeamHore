@@ -19,7 +19,7 @@ The paper introduces the dataset and implementation of a Neural Network trained 
 https://www.tensorflow.org/datasets/catalog/mnist
 
 # Goals:
-the goal of our model is how to match the input image with the machine learning model that has been created using the dataset. if the image matches, it will display the name/label of the image (string), in which case our label uses the name of the fruit.
+the goal of our model is how to match the input image with the machine learning model that has been created using the dataset. if the image matches, it will display the name/label of the image (string), in which case our label uses the name of the fruit and for the digit dataset, our model focuses on creating OCR.
 
 # technique used:
  - ImageDataGenerator: For Data Augmentation. It is a technique of creating new data from existing data by applying some transformations such as flips, rotate at a various angle, shifts, zooms and many more. Training the neural network on more data leads to achieving higher accuracy. In real-world problem, we may have limited data. Therefore, data augmentation is often used to increase train dataset. An ImageDataGenerator class function provides a range of transformations such as: Translations, Rotations, Shearing, Changes in scale, Image fliping, and Zooming.
