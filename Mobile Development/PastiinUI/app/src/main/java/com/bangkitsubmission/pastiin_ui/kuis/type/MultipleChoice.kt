@@ -78,7 +78,7 @@ class MultipleChoice : AppCompatActivity(), View.OnClickListener {
             .load(quizzes!!.pict_Quiz)
             .centerCrop()
             .into(binding.ivGambar);
-
+        binding.ivGambar.setClipToOutline(true)
         binding.tvOptionOne.text = quizzes.option1_Quiz
         binding.tvOptionTwo.text = quizzes.option2_Quiz
 
@@ -165,5 +165,6 @@ class MultipleChoice : AppCompatActivity(), View.OnClickListener {
         tv.setTextColor(Color.parseColor("#45B6FE"))
         tv.setTypeface(tv.typeface, Typeface.BOLD)
         tv.background = ContextCompat.getDrawable(this, R.drawable.selected_option_border_bg)
+
     }
 }

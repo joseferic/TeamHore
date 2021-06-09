@@ -43,12 +43,11 @@ android {
         viewBinding = true
         mlModelBinding true
     }
-    dataBinding.enabled = true
 
     viewBinding {
         enabled = true
     }
-
+    dataBinding.enabled = true
 }
 
 dependencies {

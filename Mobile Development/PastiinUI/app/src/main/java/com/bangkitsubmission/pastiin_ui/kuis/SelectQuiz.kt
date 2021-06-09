@@ -7,8 +7,6 @@ import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.bangkitsubmission.pastiin_ui.R
 import com.bangkitsubmission.pastiin_ui.databinding.ActivitySelectQuizBinding
 import com.bangkitsubmission.pastiin_ui.kuis.type.MultipleChoice
 import com.bangkitsubmission.pastiin_ui.repository.Repository

@@ -1,36 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="120dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cv_item_glorasium"
-    android:paddingTop="26dp"
-    android:paddingBottom="26dp">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="100dp"
+android:background="@drawable/white_radius_card"
+android:elevation="2dp"
+android:layout_marginLeft="32dp"
+android:layout_marginRight="32dp"
+android:layout_marginBottom="12dp"
+    >
+
+<ImageView
+    android:id="@+id/ivItemPhotoBuahGlosariom"
+    android:layout_width="72dp"
+    android:layout_height="72dp"
+    android:layout_centerVertical="true"
+    android:layout_marginStart="14dp"
+    android:orientation="vertical"
+    android:scaleType="centerCrop"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:src="@drawable/fikih"
+    android:background="@drawable/white_radius_menu_navbar"
+    />
 
     <TextView
         android:id="@+id/tv_fruitName"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:text="Nama Buah"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.553"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/ivItemPhotoBuahGlosariom"
+        app:layout_constraintTop_toTopOf="@id/ivItemPhotoBuahGlosariom"
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/iv_itemPhotoBuahGlosariom"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        app:civ_border_color="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.135"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6"
-        tools:src="@tools:sample/backgrounds/scenic" />
+        tools:text="Anchovy Extract, Tuna Extract, Bonito Extract" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

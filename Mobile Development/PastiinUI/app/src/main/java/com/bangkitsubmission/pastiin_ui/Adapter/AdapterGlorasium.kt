@@ -42,7 +42,7 @@ class AdapterGlorasium : RecyclerView.Adapter<AdapterGlorasium.MyViewHolder>(){
                 Glide.with(itemView.context)
                     .load(fruitDatas.pict_Fruit)
                     .into(ivItemPhotoBuahGlosariom)
-
+                ivItemPhotoBuahGlosariom.setClipToOutline(true)
                 itemView.setOnClickListener {
                     val intent = Intent(itemView.context, ResultActivity::class.java)
                     intent.putExtra("id", fruitDatas.id_Fruit.toString())

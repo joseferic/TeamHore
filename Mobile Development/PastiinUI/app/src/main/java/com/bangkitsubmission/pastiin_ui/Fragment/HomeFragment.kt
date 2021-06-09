@@ -16,10 +16,12 @@ import com.bangkitsubmission.pastiin_ui.kuis.SelectQuiz
 
 
 class HomeFragment : Fragment() {
+    private var someStateValue: String? = null
     lateinit var rootview : View
-
+    private val NAME_HERE_KEY = "someValueToSave"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        someStateValue = savedInstanceState?.getString(NAME_HERE_KEY)
 
     }
 
@@ -36,6 +38,9 @@ class HomeFragment : Fragment() {
         }
         var name:TextView = rootview.findViewById(R.id.nameUser)
         name.text = arguments?.getString(HomeFragment.ARG_NAME)
+        if (savedInstanceState != null) {
+            name.text = someStateValue
+        }
 
         var btnmode12: Button = rootview.findViewById(R.id.button2)
         btnmode12.setOnClickListener {
@@ -46,15 +51,26 @@ class HomeFragment : Fragment() {
         return rootview
     }
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        var name:TextView = rootview.findViewById(R.id.nameUser)
+        name.text = arguments?.getString(HomeFragment.ARG_NAME)
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(NAME_HERE_KEY, ARG_NAME)
+    }
+
     companion object {
         const val ARG_NAME: String = "NAME HERE"
 
-        fun newInstance(message: String): Any {
-            val fragment = Result_Success()
+        fun newInstance(uname: String): Any {
+            val fragment = HomeFragment()
 
             val bundle = Bundle().apply {
 
-                putString(HomeFragment.ARG_NAME, message)
+                putString(HomeFragment.ARG_NAME, uname)
             }
             fragment.arguments = bundle
 

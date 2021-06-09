@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="32dp"
         android:gravity="center"
         >
 
@@ -19,18 +19,20 @@
             android:id="@+id/tv_question"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:textColor="@color/teal_200"
-            android:textSize="22sp"
+            android:layout_margin="0dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="what is the name of the fruit below ?"
             android:textAlignment="center"
-            android:text="what is the name of the fruit below ?"/>
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <ImageView
             android:id="@+id/iv_gambar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:layout_marginTop="16dp"
-            android:src="@drawable/ic_launcher_background"/>
+            android:scaleType="centerCrop"
+            android:background="@drawable/blue_radius_background"/>
 
         <LinearLayout
             android:id="@+id/ll_progress_details"
@@ -45,7 +47,7 @@
                 android:id="@+id/progressBar"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width= "wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:layout_weight="1"
                 android:max="3"
                 android:minHeight="50dp"
@@ -59,9 +61,9 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="15dp"
+                android:text="0/3"
                 android:textColorHint="@color/black"
-                android:textSize="18sp"
-                android:text="0/3"/>
+                android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -70,11 +72,12 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:textColor="@color/black"
-            android:textAlignment="center"
-            android:textSize="22sp"
+            android:background="@drawable/default_option_border_bg"
+            android:paddingVertical="10dp"
             android:text="Option 1"
-            android:background="@drawable/default_option_border_bg"/>
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/tv_option_two"
@@ -85,14 +88,16 @@
             android:textAlignment="center"
             android:textSize="22sp"
             android:text="Option 2"
-            android:background="@drawable/default_option_border_bg"/>
+            android:paddingVertical="10dp"
+            android:background="@drawable/default_option_border_bg"
+            />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@color/teal_200"
+            android:background="@drawable/orange_radius_background"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:text="Submit"
