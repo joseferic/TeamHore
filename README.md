@@ -23,10 +23,12 @@ the goal of our model is how to match the input image with the machine learning 
 # Mobile Programming technique used:
 - Recycleview list to show list of datas of fruits
 - Retrofit Instance API Post and Get using MainViewModel
-- Fragment and Activities for apps, Main Activity using fragments 
--
+- Fragment and Activities for apps, Main Activity using fragments
 
 # Cloud Computing technique used:
+ - Google Cloud Computing
+ - App engine
+ - AI platform
 
 # Problems:
 Our application has not been able to integrate the feature of counting fruit by writing numbers and there are still many features that have not been embedded in our application, such as games features, learning to write letters, allergy detection, and others. However, this problem seems to be easily solved because it is only constrained by a very short processing time.
