@@ -2,9 +2,10 @@ const sql = require("./db.js");
 
 // constructor
 const Quizhistory = function(quizhistory) {
+  this.timestamp_quizHistory = quizhistory.timestamp_quizHistory;
   this.id_Quiz = quizhistory.id_Quiz;
   this.id_User = quizhistory.id_User;
-  this.timestamp_quizHistory = quizhistory.timestamp_quizHistory;
+  this.type_Quiz = quizhistory.type_Quiz;
   this.result_quizHistory = quizhistory.result_quizHistory;
 };
 
@@ -75,8 +76,8 @@ Quizhistory.getAll = result => {
 
 Quizhistory.updateById = (id_quizHistory, quizhistory, result) => {
   sql.query(
-    "UPDATE quizhistory SET id_Quiz = ?, id_User = ?, timestamp_quizHistory = ?, result_quizHistory = ? WHERE id_quizHistory = ?",
-    [quizhistory.id_Quiz, quizhistory.id_User, quizhistory.timestamp_quizHistory, quizhistory.result_quizHistory, id_quizHistory],
+    "UPDATE quizhistory SET timestamp_quizHistory = ?, id_Quiz = ?, id_User = ?, type_Quiz = ?, score_quizHistory = ? WHERE id_quizHistory = ?",
+    [quizhistory.timestamp_quizHistory, quizhistory.id_Quiz, quizhistory.id_User, uizhistory.type_Quiz,  quizhistory.score_quizHistory, id_quizHistory],
     (err, res) => {
       if (err) {
         console.log("error: ", err);
