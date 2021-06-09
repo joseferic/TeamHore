@@ -24,7 +24,12 @@ the goal of our model is how to match the input image with the machine learning 
 - Recycleview list to show list of datas of fruits
 - Retrofit Instance API Post and Get using MainViewModel
 - Fragment and Activities for apps, Main Activity using fragments 
--
+- User Friendly design
+- Implement live data
+- Implement Model View Architecture
+- Implement sharedPref for permission to open camera
+- Implement Login and Register System so user can save their data
+- 
 
 # Cloud Computing technique used:
 
