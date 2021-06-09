@@ -8,6 +8,9 @@ Fikih Firmansyah C3192855 (CLOUD COMPUTING)
 
 [FINAL PROJECT IS HERE](https://github.com/joseferic/TeamHore/tree/main/Mobile%20Development/PastiinUI)
 
+# Summary
+"Pasti-in: Smart Ways to Learn For Children" is an interactive application intended for children where the application contains an introduction to fruits so that children know the names of fruits and the application is equipped with quizzes that can train cognitive development in children.
+
 # Dataset source (Fruit):
  - Fruit: https://www.kaggle.com/moltean/fruits
  - Digit: https://www.tensorflow.org/datasets/catalog/mnist
