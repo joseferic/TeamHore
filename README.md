@@ -6,6 +6,8 @@ Suci Ananda Sholihat M1721795 (MACHINE LEARNING)
 Arifatul Khasanah C2832609 (CLOUD COMPUTING)
 Fikih Firmansyah C3192855 (CLOUD COMPUTING)
 
+[FINAL PROJECT IS HERE](https://github.com/joseferic/TeamHore/tree/main/Mobile%20Development/PastiinUI)
+
 # Dataset source (Fruit):
  - Fruit: https://www.kaggle.com/moltean/fruits
  - Digit: https://www.tensorflow.org/datasets/catalog/mnist
@@ -34,6 +36,11 @@ Our application has not been able to integrate the feature of counting fruit by 
  
     <img src="https://user-images.githubusercontent.com/80331973/121385638-7cf84700-c973-11eb-97de-90344630cde9.png" width="200"> <img src="https://user-images.githubusercontent.com/80331973/121385668-841f5500-c973-11eb-8e3b-b7ff6b77c5e8.png" width="200">
 
+# Could be added in the future:
+ - Adding the working Digit [Classifier Trial App](https://github.com/joseferic/TeamHore/tree/main/Mobile%20Development/digit_classifier) Model into the Quiz 
+ - fixing the bugs at the app
+ - uploading the user image for the user
+ - enhancing the Model to recognise other fruit details 
 
 # Summary:
 In general, the model that we have created can predict the added image well and is quite accurate. The results of the test accuracy and the test loss on the OCR reached 0.059100549668073654 and 0.9830999970436096, respectively, which were good. On the other hand, the fruit detector, the results of the test accuracy and the test loss were able to reach 0.33575233817100525 and 0.9466678500175476, respectively.
