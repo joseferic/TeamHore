@@ -19,6 +19,10 @@ the goal of our model is how to match the input image with the machine learning 
  - Sequential: Model is appropriate for a plain stack of layers where each layer has exactly one input tensor and one output tensor.
 
 # Mobile Programming technique used:
+- Recycleview list to show list of datas of fruits
+- Retrofit Instance API Post and Get using MainViewModel
+- Fragment and Activities for apps, Main Activity using fragments 
+-
 
 # Cloud Computing technique used:
 
@@ -26,8 +30,8 @@ the goal of our model is how to match the input image with the machine learning 
 Our application has not been able to integrate the feature of counting fruit by writing numbers and there are still many features that have not been embedded in our application, such as games features, learning to write letters, allergy detection, and others. However, this problem seems to be easily solved because it is only constrained by a very short processing time.
 
 # App Appearance:
- - Tampilan Login
- -
+ - Tampilan Login dan register
+ 
     <img src="https://user-images.githubusercontent.com/80331973/121385638-7cf84700-c973-11eb-97de-90344630cde9.png" width="200"> <img src="https://user-images.githubusercontent.com/80331973/121385668-841f5500-c973-11eb-8e3b-b7ff6b77c5e8.png" width="200">
 
 
