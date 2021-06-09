@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-<<<<<<< HEAD
     package="com.example.login_post">
-=======
-    package="com.example.login_post" >
->>>>>>> fd3f7db4bec5c4841241e4d8880c063839931dc2
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,22 +10,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-<<<<<<< HEAD
         android:theme="@style/Theme.LoginPost">
-        <activity android:name=".kuis.type.MultipleChoice"></activity>
+        <activity android:name=".kuis.ResultActivity"></activity>
+        <activity android:name=".kuis.type.MultipleChoice" />
         <activity
             android:name=".kuis.Quiz"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize">
-=======
-        android:theme="@style/Theme.LoginPost" >
-        <activity android:name=".kuis.Quiz"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize"
-            >
-        </activity>
-        <activity android:name=".MainActivity" >
->>>>>>> fd3f7db4bec5c4841241e4d8880c063839931dc2
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

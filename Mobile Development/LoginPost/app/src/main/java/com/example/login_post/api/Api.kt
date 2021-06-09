@@ -24,10 +24,7 @@ interface Api {
 
     @GET("users")
     suspend fun getListUserData(): Response<List<UserDatas>>
-<<<<<<< HEAD
 
     @GET("quizzes")
     suspend fun getListQuiz(): Response<List<Quizzes>>
-=======
->>>>>>> fd3f7db4bec5c4841241e4d8880c063839931dc2
 }
