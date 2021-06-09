@@ -54,4 +54,12 @@ class MainViewModel(private val repository: Repository): ViewModel() {
         }
     }
 
+    val myListFruitGlorasium: MutableLiveData<Response<List<FruitDatas>>> = MutableLiveData()
+
+    fun getListFruit(){
+        viewModelScope.launch {
+            val response = repository.getListFruit()
+            myListFruitGlorasium.value = response
+        }
+    }
 }

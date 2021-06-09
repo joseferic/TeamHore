@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     >
-    <item android:id="@+id/composition_menu"
+    <item android:id="@+id/glorasium_menu"
         android:icon="@drawable/glosarium_icon_state"
         android:title="glosarium"
         />

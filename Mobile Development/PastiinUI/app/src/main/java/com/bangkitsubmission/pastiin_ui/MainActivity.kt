@@ -6,6 +6,7 @@ import android.view.MenuItem
 import androidx.appcompat.app.ActionBar
 import androidx.fragment.app.Fragment
 import com.bangkitsubmission.pastiin_ui.Fragment.CompositionFragment
+import com.bangkitsubmission.pastiin_ui.Fragment.GlosariumFragment
 import com.bangkitsubmission.pastiin_ui.Fragment.HistoryFragment
 import com.bangkitsubmission.pastiin_ui.Fragment.HomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -39,9 +40,10 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         var localfragment: Fragment? = null
         when(item.itemId){
-            R.id.composition_menu-> localfragment = CompositionFragment()
+            R.id.glorasium_menu-> localfragment = GlosariumFragment()
             R.id.home_menu -> localfragment = HomeFragment()
             R.id.history_menu-> localfragment = HistoryFragment()
+
         }
 
        return loadFragment(localfragment)
