@@ -27,9 +27,9 @@ Our application has not been able to integrate the feature of counting fruit by 
 
 # App Appearance:
  - Tampilan Login
-    ![image](https://user-images.githubusercontent.com/80331973/121385638-7cf84700-c973-11eb-97de-90344630cde9.png)
+    <img src="https://user-images.githubusercontent.com/80331973/121385638-7cf84700-c973-11eb-97de-90344630cde9.png" width="200">
     
-    ![image](https://user-images.githubusercontent.com/80331973/121385668-841f5500-c973-11eb-8e3b-b7ff6b77c5e8.png)
+    <img src="https://user-images.githubusercontent.com/80331973/121385668-841f5500-c973-11eb-8e3b-b7ff6b77c5e8.png" width="200">
 
 
 # Summary:
@@ -40,7 +40,7 @@ In general, the model that we have created can predict the added image well and 
 
 # Agenda:
  -  Make Restful API with App Engine to connect ML and Android.
-<img src="https://user-images.githubusercontent.com/54542591/121374228-eecb9300-c969-11eb-9646-f8e6010cd57f.png" width="48">
+<img src="https://user-images.githubusercontent.com/54542591/121374228-eecb9300-c969-11eb-9646-f8e6010cd57f.png" >
  -  Build database server with Cloud SQL to store data object.
 ![console cloud google com_sql_instances_db-check_overview_authuser=2 organizationId=112315058424 project=western-will-312804 cloudshell=true](https://user-images.githubusercontent.com/54542591/121374304-fe4adc00-c969-11eb-9949-9851d464929f.png)
 
