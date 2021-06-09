@@ -96,6 +96,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:src="@drawable/fikih" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 

@@ -7,6 +7,7 @@ import com.bangkitsubmission.pastiin_ui.model.CompDatas
 import com.bangkitsubmission.pastiin_ui.model.FruitDatas
 import com.bangkitsubmission.pastiin_ui.model.UserDatas
 import com.bangkitsubmission.pastiin_ui.repository.Repository
+import com.example.login_post.kuis.Quizzes
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
@@ -60,6 +61,15 @@ class MainViewModel(private val repository: Repository): ViewModel() {
         viewModelScope.launch {
             val response = repository.getListFruit()
             myListFruitGlorasium.value = response
+        }
+    }
+
+    val myListQuizResponse: MutableLiveData<Response<List<Quizzes>>> = MutableLiveData()
+
+    fun getListQuiz(){
+        viewModelScope.launch {
+            val response = repository.getListQuiz()
+            myListQuizResponse.value = response
         }
     }
 }

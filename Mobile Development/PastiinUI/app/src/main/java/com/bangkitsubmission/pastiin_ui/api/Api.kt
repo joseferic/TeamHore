@@ -3,6 +3,7 @@ package com.bangkitsubmission.pastiin_ui.api
 import com.bangkitsubmission.pastiin_ui.model.CompDatas
 import com.bangkitsubmission.pastiin_ui.model.FruitDatas
 import com.bangkitsubmission.pastiin_ui.model.UserDatas
+import com.example.login_post.kuis.Quizzes
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -31,4 +32,7 @@ interface Api {
 
     @GET("fruits")
     suspend fun getListFruitData(): Response<List<FruitDatas>>
+
+    @GET("quizzes")
+    suspend fun getListQuiz(): Response<List<Quizzes>>
 }

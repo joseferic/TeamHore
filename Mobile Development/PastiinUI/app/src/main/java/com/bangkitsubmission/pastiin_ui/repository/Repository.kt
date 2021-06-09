@@ -4,6 +4,7 @@ import com.bangkitsubmission.pastiin_ui.api.RetrofitInstance
 import com.bangkitsubmission.pastiin_ui.model.CompDatas
 import com.bangkitsubmission.pastiin_ui.model.FruitDatas
 import com.bangkitsubmission.pastiin_ui.model.UserDatas
+import com.example.login_post.kuis.Quizzes
 import retrofit2.Response
 
 class Repository {
@@ -30,6 +31,9 @@ class Repository {
 
     suspend fun getListFruit(): Response<List<FruitDatas>>{
         return RetrofitInstance.api.getListFruitData()
+    }
+    suspend fun getListQuiz(): Response<List<Quizzes>>{
+        return RetrofitInstance.api.getListQuiz()
     }
 
 }

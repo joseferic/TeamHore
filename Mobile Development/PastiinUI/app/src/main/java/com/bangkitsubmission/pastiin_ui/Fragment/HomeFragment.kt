@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import com.bangkitsubmission.pastiin_ui.R
 
 import com.bangkitsubmission.pastiin_ui.SetImageActivity
+import com.bangkitsubmission.pastiin_ui.kuis.SelectQuiz
 
 
 
@@ -35,6 +36,12 @@ class HomeFragment : Fragment() {
         }
         var name:TextView = rootview.findViewById(R.id.nameUser)
         name.text = arguments?.getString(HomeFragment.ARG_NAME)
+
+        var btnmode12: Button = rootview.findViewById(R.id.button2)
+        btnmode12.setOnClickListener {
+            val intent = Intent(activity, SelectQuiz::class.java)
+            startActivity(intent)
+        }
 
         return rootview
     }

@@ -16,25 +16,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PastiinUI">
-        <activity android:name=".RegisterActivity">
-
-        </activity>
-        <activity android:name=".LoginActivity" >
+        <activity android:name=".kuis.type.MultipleChoice"></activity>
+        <activity
+            android:name=".kuis.SelectQuiz"
+            android:label="@string/title_activity_select_quiz"
+            android:theme="@style/Theme.PastiinUI.NoActionBar" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".SetImageActivity" />
-        <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".ResultActivity" >
-
-
-        </activity>
-
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ResultActivity" />
         <activity
             android:name="com.canhub.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
