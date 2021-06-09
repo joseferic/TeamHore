@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkitsubmission.pastiin_ui.R
+import com.bangkitsubmission.pastiin_ui.ResultActivity
 import com.bangkitsubmission.pastiin_ui.databinding.RowItemGlosariumBinding
 import com.bangkitsubmission.pastiin_ui.model.FruitDatas
 import com.bumptech.glide.Glide
@@ -43,9 +44,9 @@ class AdapterGlorasium : RecyclerView.Adapter<AdapterGlorasium.MyViewHolder>(){
                     .into(ivItemPhotoBuahGlosariom)
 
                 itemView.setOnClickListener {
-                    //val intent = Intent(itemView.context, DetailActivity::class.java)
-                    //intent.putExtra(DetailActivity.EXTRA_MOVIES, movie)
-                    //itemView.context.startActivity(intent)
+                    val intent = Intent(itemView.context, ResultActivity::class.java)
+                    intent.putExtra("id", fruitDatas.id_Fruit.toString())
+                    itemView.context.startActivity(intent)
                     Log.d("Recycler View dipencet", "${fruitDatas.name_Fruit}")
                 }
             }

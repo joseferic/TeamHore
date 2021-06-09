@@ -49,7 +49,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="32dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="Hasil Pindai"
+                    android:text="Informasi Buah"
                     android:textColor="#FFFFFF"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
