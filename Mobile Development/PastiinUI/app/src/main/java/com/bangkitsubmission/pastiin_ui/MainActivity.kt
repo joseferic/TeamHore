@@ -8,10 +8,11 @@ import androidx.fragment.app.Fragment
 import com.bangkitsubmission.pastiin_ui.Fragment.CompositionFragment
 import com.bangkitsubmission.pastiin_ui.Fragment.HistoryFragment
 import com.bangkitsubmission.pastiin_ui.Fragment.HomeFragment
+import com.bangkitsubmission.pastiin_ui.Fragment.Result_Success
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener   {
-
+    lateinit var message:String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,8 +22,10 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         btnnav.setSelectedItemId(R.id.home_menu)
         loadFragment(HomeFragment())
         btnnav.setOnNavigationItemSelectedListener(this)
+        val bundle = intent.extras
+        message = bundle!!.getString("uname").toString()
 
-
+        val fragment = HomeFragment.newInstance(message)
 
     }
 

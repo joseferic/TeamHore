@@ -43,7 +43,8 @@ class Result_Success : Fragment() {
     }
 
     companion object {
-       const val ARG_FRUITS = "THIS DATA"
+
+        const val ARG_FRUITS = "THIS DATA"
         const val ARG_DESC = "THAT DATA"
         const val ARG_PICTURE = "THOSE DATA"
         fun newInstance(a: String, b: String, c: String): Result_Success {

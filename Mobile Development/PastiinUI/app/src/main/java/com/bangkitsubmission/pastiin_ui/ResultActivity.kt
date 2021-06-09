@@ -28,7 +28,7 @@ class ResultActivity : AppCompatActivity() {
         val bundle = intent.extras
         message = bundle!!.getString("id").toString()
 
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 
         val repository = Repository()
         val viewModelFactory = MainViewModelFactory(repository)

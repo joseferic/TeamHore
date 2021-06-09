@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.bangkitsubmission.pastiin_ui.R
 
@@ -32,11 +33,26 @@ class HomeFragment : Fragment() {
             val intent = Intent(activity, SetImageActivity::class.java)
             startActivity(intent)
         }
+        var name:TextView = rootview.findViewById(R.id.nameUser)
+        name.text = arguments?.getString(HomeFragment.ARG_NAME)
 
         return rootview
     }
 
     companion object {
+        const val ARG_NAME: String = "NAME HERE"
+
+        fun newInstance(message: String): Any {
+            val fragment = Result_Success()
+
+            val bundle = Bundle().apply {
+
+                putString(HomeFragment.ARG_NAME, message)
+            }
+            fragment.arguments = bundle
+
+            return fragment
+        }
 
     }
 }
