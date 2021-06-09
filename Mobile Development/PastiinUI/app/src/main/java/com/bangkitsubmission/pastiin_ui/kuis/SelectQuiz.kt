@@ -56,6 +56,7 @@ class SelectQuiz : AppCompatActivity() {
                   val intent = Intent(this@SelectQuiz, MultipleChoice::class.java)
                   intent.putParcelableArrayListExtra("list", listQuizGambar as ArrayList<Quizzes?>?)
                   startActivity(intent)
+                  finish()
             }
             binding.btnQuizTebakBanyakBuah.setOnClickListener {
                 Log.d("List Tebak Byk Buah = ", listQuizAngka.toString())
@@ -63,6 +64,7 @@ class SelectQuiz : AppCompatActivity() {
                 val intent = Intent(this@SelectQuiz, MultipleChoice::class.java)
                 intent.putParcelableArrayListExtra("list", listQuizAngka as ArrayList<Quizzes?>?)
                 startActivity(intent)
+                finish()
             }
         })
 

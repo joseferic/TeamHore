@@ -64,6 +64,7 @@
                 android:gravity="center"
                 android:padding="15dp"
                 android:text="0/3"
+                android:textColor="@color/grey"
                 android:textColorHint="@color/black"
                 android:textSize="12sp" />
 
