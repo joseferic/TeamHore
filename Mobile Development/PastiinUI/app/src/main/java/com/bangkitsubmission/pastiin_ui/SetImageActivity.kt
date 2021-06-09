@@ -90,16 +90,13 @@ class SetImageActivity : AppCompatActivity() {
         }
         binding.btnpredict.setOnClickListener {
             var resized: Bitmap = Bitmap.createScaledBitmap(bitmap, 100, 100, true)
-            //val model = MobilenetV110224Quant.newInstance(this)
+
             var model =  ModelFruit11.newInstance(this)
 
             // Creates inputs for reference.
             var inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 100, 100, 3), DataType.FLOAT32)
 
-//            val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.UINT8)
 
-            //var inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.FLOAT32)
-//            var tbuffer = TensorImage.fromBitmap(resized)
             var tensorImage = TensorImage(DataType.FLOAT32)
             tensorImage.load(resized)
 
@@ -117,6 +114,7 @@ class SetImageActivity : AppCompatActivity() {
 
             var intent = Intent(this, ResultActivity::class.java)
             intent.putExtra("id",listFromLabel[max])
+
             // Releases model resources if no longer used.
             model.close()
             startActivity(intent)
