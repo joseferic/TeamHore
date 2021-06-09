@@ -36,13 +36,13 @@ Our application has not been able to integrate the feature of counting fruit by 
  
     <img src="https://user-images.githubusercontent.com/80331973/121385638-7cf84700-c973-11eb-97de-90344630cde9.png" width="200"> <img src="https://user-images.githubusercontent.com/80331973/121385668-841f5500-c973-11eb-8e3b-b7ff6b77c5e8.png" width="200">
     
-    ![image](https://user-images.githubusercontent.com/80331973/121390646-c9458600-c977-11eb-8246-c71cae4e5889.png)
-    ![image](https://user-images.githubusercontent.com/80331973/121390695-d3678480-c977-11eb-962a-288eab091349.png)
-    ![image](https://user-images.githubusercontent.com/80331973/121390755-e24e3700-c977-11eb-917f-28d9a2bf1dfe.png)
-    ![image](https://user-images.githubusercontent.com/80331973/121390798-ed08cc00-c977-11eb-8220-02e2f9906ef5.png)
-    ![image](https://user-images.githubusercontent.com/80331973/121390819-f3974380-c977-11eb-93ca-bf1729dda341.png)
-    ![image](https://user-images.githubusercontent.com/80331973/121390878-ff830580-c977-11eb-9da9-8267e390c3dc.png)
-    ![image](https://user-images.githubusercontent.com/80331973/121390900-06117d00-c978-11eb-836c-423641ab2cd1.png)
+    <img src="https://user-images.githubusercontent.com/80331973/121390646-c9458600-c977-11eb-8246-c71cae4e5889.png" width="200">
+     <img src="https://user-images.githubusercontent.com/80331973/121390695-d3678480-c977-11eb-962a-288eab091349.png" width="200">
+    <img src="https://user-images.githubusercontent.com/80331973/121390755-e24e3700-c977-11eb-917f-28d9a2bf1dfe.png" width="200">
+    <img src="https://user-images.githubusercontent.com/80331973/121390798-ed08cc00-c977-11eb-8220-02e2f9906ef5.png" width="200">
+    <img src="https://user-images.githubusercontent.com/80331973/121390819-f3974380-c977-11eb-93ca-bf1729dda341.png" width="200">
+    <img src="https://user-images.githubusercontent.com/80331973/121390878-ff830580-c977-11eb-9da9-8267e390c3dc.png" width="200">
+    <img src="https://user-images.githubusercontent.com/80331973/121390900-06117d00-c978-11eb-836c-423641ab2cd1.png" width="200">
 
 # Could be added in the future:
  - Adding the working Digit [Classifier Trial App](https://github.com/joseferic/TeamHore/tree/main/Mobile%20Development/digit_classifier) Model into the Quiz 
