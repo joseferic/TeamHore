@@ -4,7 +4,9 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".kuis.SelectQuiz">
+    tools:context=".kuis.SelectQuiz"
+    android:background="@color/white"
+    >
 
     <TextView
         android:id="@+id/tv_quiz"
