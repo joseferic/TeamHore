@@ -32,19 +32,19 @@ class MainActivity : AppCompatActivity() {
         val repository = Repository()
         val viewModelFactory = MainViewModelFactory(repository)
         viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
-        viewModel.getCompDatas()
-        viewModel.myResponse.observe(this, Observer { responses ->
-           if (responses.isSuccessful){
-               Log.d("Response",responses.body()?.id_compsData.toString())
-               Log.d("Response",responses.body()?.id_foodData.toString())
-               Log.d("Response",responses.body()?.name_compsData!!)
-               binding.namaBahanMakanan.setText(responses.body()?.name_compsData!!)
-               Log.d("Response",responses.body()?.desc_compsData!!)
-           }
-            else{
-                Log.d("Response",responses.errorBody().toString())
-            }
-        })
+//        viewModel.getCompDatas()
+//        viewModel.myResponse.observe(this, Observer { responses ->
+//           if (responses.isSuccessful){
+//               Log.d("Response",responses.body()?.id_compsData.toString())
+//               Log.d("Response",responses.body()?.id_foodData.toString())
+//               Log.d("Response",responses.body()?.name_compsData!!)
+//               binding.namaBahanMakanan.setText(responses.body()?.name_compsData!!)
+//               Log.d("Response",responses.body()?.desc_compsData!!)
+//           }
+//            else{
+//                Log.d("Response",responses.errorBody().toString())
+//            }
+//        })
 
 /*        viewModel.getListCompDatas()
         viewModel.myListResponse.observe(this, Observer { response ->
@@ -76,19 +76,11 @@ class MainActivity : AppCompatActivity() {
             viewModel.getListUserDatas()
             viewModel.myListUserDataResponse.observe(this, Observer { response->
                 if (response.isSuccessful){
-<<<<<<< HEAD
                     var userListDataBase = response.body()
                     var DatanyaAda : Boolean = false
                     Log.d("userDatabase",userListDataBase.toString())
                     for (i in userListDataBase!!.indices){
                         var userDatabase = userListDataBase[i]
-=======
-                    var UserListDataBase = response.body()
-                    var DatanyaAda : Boolean = false
-                    Log.d("userDatabase",UserListDataBase.toString())
-                    for (i in UserListDataBase!!.indices){
-                        var userDatabase = UserListDataBase[i]
->>>>>>> fd3f7db4bec5c4841241e4d8880c063839931dc2
                         Log.d("userDatabase",userDatabase.toString())
                         if (testUser.email_User == userDatabase.email_User && testUser.pass_User == userDatabase.pass_User){
                             Log.d("userDatabase",userDatabase.toString())

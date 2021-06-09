@@ -47,7 +47,6 @@ class MainViewModel(private val repository: Repository): ViewModel() {
         }
     }
 
-<<<<<<< HEAD
     val myListQuizResponse: MutableLiveData<Response<List<Quizzes>>> = MutableLiveData()
 
     fun getListQuiz(){
@@ -57,6 +56,4 @@ class MainViewModel(private val repository: Repository): ViewModel() {
         }
     }
 
-=======
->>>>>>> fd3f7db4bec5c4841241e4d8880c063839931dc2
 }

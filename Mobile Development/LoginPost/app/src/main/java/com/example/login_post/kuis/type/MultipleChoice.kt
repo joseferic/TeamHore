@@ -1,5 +1,6 @@
 package com.example.login_post.kuis.type
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
@@ -13,9 +14,12 @@ import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.example.login_post.R
 import com.example.login_post.databinding.ActivityMultipleChoiceBinding
+import com.example.login_post.kuis.Quiz
 import com.example.login_post.kuis.Quizzes
+import com.example.login_post.kuis.ResultActivity
 import com.example.login_post.viewmodel.MainViewModel
 import kotlinx.android.synthetic.main.activity_multiple_choice.*
+import kotlin.random.Random
 
 class MultipleChoice : AppCompatActivity(), View.OnClickListener {
 
@@ -25,6 +29,8 @@ class MultipleChoice : AppCompatActivity(), View.OnClickListener {
     private var mCurrentPosition: Int = 1
     private var mQuizList: ArrayList<Quizzes>? = null
     private var mSelectedOptionPosition: Int = 0
+    private var mCorrectAnswer: Int = 0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +40,10 @@ class MultipleChoice : AppCompatActivity(), View.OnClickListener {
         //val mQuizList: ArrayList<Quizzes?>? = intent.getParcelableArrayListExtra<Quizzes?>("list")
         mQuizList = intent.getParcelableArrayListExtra<Quizzes?>("list")
 
+        mQuizList = randomQuestion(mQuizList)
+
         Log.d("List PG", mQuizList.toString())
+
         setQuestion()
 
         binding.tvOptionOne.setOnClickListener(this)
@@ -43,12 +52,26 @@ class MultipleChoice : AppCompatActivity(), View.OnClickListener {
         binding.btnSubmit.setOnClickListener(this)
     }
 
+    private fun randomQuestion(mQuizListRandom: ArrayList<Quizzes>?) : ArrayList<Quizzes>?{
+
+        for (i in mQuizListRandom!!.indices){
+            mQuizListRandom[i] = mQuizListRandom[Random.nextInt(0, mQuizListRandom.size)]
+        }
+        return mQuizListRandom
+    }
+
     private fun setQuestion() {
-        mCurrentPosition = 1
-        val quizzes: Quizzes? = mQuizList?.get(mCurrentPosition - 1)
+        //var quizzes: Quizzes? = mQuizList?.get(mCurrentPosition - 1)
+        var quizzes: Quizzes? = mQuizList!!.get(mCurrentPosition - 1)
         Log.d("Quiz = ", quizzes.toString())
 
         defaultOptionView()
+
+        if (mCurrentPosition == 3) {
+            binding.btnSubmit.text = "Finish"
+        } else {
+            binding.btnSubmit.text = "Submit"
+        }
 
         binding.progressBar.progress = mCurrentPosition
         binding.tvProgressBar.text = "$mCurrentPosition" + "/" + binding.progressBar.max
@@ -89,35 +112,39 @@ class MultipleChoice : AppCompatActivity(), View.OnClickListener {
                 if (mSelectedOptionPosition == 0) {
                     mCurrentPosition++
                     when {
-                        mCurrentPosition <= mQuizList!!.size -> {
+                        mCurrentPosition <= 3 -> {
                             setQuestion()
                         }
                         else -> {
                             Toast.makeText(
                                 this,
-                                "You have succesfully completed the Quiz",
+                                "Congratulations you finish the quiz",
                                 Toast.LENGTH_SHORT
                             ).show()
+                            val intent = Intent(this, ResultActivity::class.java)
+                            intent.putExtra("score",mCorrectAnswer)
+                            startActivity(intent)
                         }
                     }
                 } else {
                     val question = mQuizList?.get(mCurrentPosition - 1)
                     if (question!!.correctanswer_Quiz != mSelectedOptionPosition) {
-                        answerView(mSelectedOptionPosition,R.drawable.wrong_option_border_bg)
+                        answerView(mSelectedOptionPosition, R.drawable.wrong_option_border_bg)
+                    } else {
+                        mCorrectAnswer++
+                        answerView(mSelectedOptionPosition, R.drawable.correct_option_border_bg)
                     }
-                    else{
-                        answerView(question.correctanswer_Quiz,R.drawable.correct_option_border_bg)
-                    }
-                    if (mCurrentPosition == mQuizList!!.size){
+                    if (mCurrentPosition == 3) {
                         binding.btnSubmit.text = "Finish"
-                    }else{
-                        binding.btnSubmit.text = "Go to next question"
+                    } else {
+                        binding.btnSubmit.text = "Next Question"
                     }
-
+                    mSelectedOptionPosition = 0
                 }
             }
         }
     }
+
 
     private fun answerView(answer: Int, drawableView: Int) {
         when (answer) {
@@ -125,6 +152,10 @@ class MultipleChoice : AppCompatActivity(), View.OnClickListener {
                 tv_option_one.background = ContextCompat.getDrawable(this, drawableView)
             }
             2 -> {
+                tv_option_two.background = ContextCompat.getDrawable(this, drawableView)
+            }
+            else -> {
+                tv_option_one.background = ContextCompat.getDrawable(this, drawableView)
                 tv_option_two.background = ContextCompat.getDrawable(this, drawableView)
             }
         }
