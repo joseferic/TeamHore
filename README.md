@@ -29,7 +29,6 @@ the goal of our model is how to match the input image with the machine learning 
 - Implement Model View Architecture
 - Implement sharedPref for permission to open camera
 - Implement Login and Register System so user can save their data
-- 
 
 # Cloud Computing technique used:
 
