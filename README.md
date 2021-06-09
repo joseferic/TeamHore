@@ -7,21 +7,8 @@ Arifatul Khasanah C2832609 (CLOUD COMPUTING)
 Fikih Firmansyah C3192855 (CLOUD COMPUTING)
 
 # Dataset source (Fruit):
-https://www.kaggle.com/moltean/fruits
-
-properties:
- - Total number of images: 90483.
- - Training set size: 67692 images (one fruit or vegetable per image).
- - Test set size: 22688 images (one fruit or vegetable per image).
- - Number of classes: 131 (fruits and vegetables).
- - Image size: 100x100 pixels.
-Filename format: imageindex100.jpg (e.g. 32100.jpg) or rimageindex100.jpg (e.g. r32100.jpg) or r2imageindex100.jpg or r3imageindex100.jpg. "r" stands for rotated fruit. "r2" means that the fruit was rotated around the 3rd axis. "100" comes from image size (100x100 pixels). Different varieties of the same fruit (apple for instance) are stored as belonging to different classes.
-
-Research papers: Horea Muresan, Mihai Oltean, Fruit recognition from images using deep learning, Acta Univ. Sapientiae, Informatica Vol. 10, Issue 1, pp. 26-42, 2018.
-The paper introduces the dataset and implementation of a Neural Network trained to recognize the fruits in the dataset.
-
-# Dataset source (Digit):
-https://www.tensorflow.org/datasets/catalog/mnist
+ - Fruit: https://www.kaggle.com/moltean/fruits
+ - Digit: https://www.tensorflow.org/datasets/catalog/mnist
 
 # Goals:
 the goal of our model is how to match the input image with the machine learning model that has been created using the dataset. if the image matches, it will display the name/label of the image (string), in which case our label uses the name of the fruit and for the digit dataset, our model focuses on creating OCR.
