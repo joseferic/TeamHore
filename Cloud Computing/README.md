@@ -1,12 +1,13 @@
 # TeamHore
-Josef Eric A0101106 (ANDROID)
-Rasyid Hafiz A3192866 (ANDROID)
-Riefky Arif Ibrahim M0101084 (MACHINE LEARNING)
-Suci Ananda Sholihat M1721795 (MACHINE LEARNING)
-Arifatul Khasanah C2832609 (CLOUD COMPUTING)
-Fikih Firmansyah C3192855 (CLOUD COMPUTING)
+ - Josef Eric A0101106 (ANDROID)
+ - Rasyid Hafiz A3192866 (ANDROID)
+ - Riefky Arif Ibrahim M0101084 (MACHINE LEARNING)
+ - Suci Ananda Sholihat M1721795 (MACHINE LEARNING)
+ - Arifatul Khasanah C2832609 (CLOUD COMPUTING)
+ - Fikih Firmansyah C3192855 (CLOUD COMPUTING)
 
 [FINAL PROJECT IS HERE](https://github.com/joseferic/TeamHore/tree/main/Mobile%20Development/PastiinUI)
+[API](https://github.com/joseferic/TeamHore/tree/main/Cloud%20Computing/api-horeee)
 
 # Summary
 "Pasti-in: Smart Ways to Learn For Children" is an interactive application intended for children where the application contains an introduction to fruits so that children know the names of fruits and the application is equipped with quizzes that can train cognitive development in children.
