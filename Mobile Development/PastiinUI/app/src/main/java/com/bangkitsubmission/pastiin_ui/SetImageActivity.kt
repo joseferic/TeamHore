@@ -43,7 +43,7 @@ class SetImageActivity : AppCompatActivity() {
         binding.after.visibility = View.INVISIBLE
         binding.before.visibility = View.VISIBLE
 
-        val fileName = "labelmap_after_simplified.txt"
+        val fileName = "label_per_id_fruit.txt"
         val inputString = application.assets.open(fileName).bufferedReader().use { it.readText() }
         var listFromLabel = inputString.split("\n")
 
@@ -90,16 +90,13 @@ class SetImageActivity : AppCompatActivity() {
         }
         binding.btnpredict.setOnClickListener {
             var resized: Bitmap = Bitmap.createScaledBitmap(bitmap, 100, 100, true)
-            //val model = MobilenetV110224Quant.newInstance(this)
+
             var model =  ModelFruit11.newInstance(this)
 
             // Creates inputs for reference.
             var inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 100, 100, 3), DataType.FLOAT32)
 
-//            val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.UINT8)
 
-            //var inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.FLOAT32)
-//            var tbuffer = TensorImage.fromBitmap(resized)
             var tensorImage = TensorImage(DataType.FLOAT32)
             tensorImage.load(resized)
 
@@ -113,10 +110,14 @@ class SetImageActivity : AppCompatActivity() {
 
             var max = getMaxIndex(outputFeature0.floatArray)
 
-            binding.textView.setText(listFromLabel[max])
+            binding.textView.setText(listFromLabel[max])// ini jadiin kirim ke result sebelah
+
+            var intent = Intent(this, ResultActivity::class.java)
+            intent.putExtra("id",listFromLabel[max])
 
             // Releases model resources if no longer used.
             model.close()
+            startActivity(intent)
         }
     }
 

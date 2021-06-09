@@ -3,6 +3,7 @@ package com.example.login_post.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.login_post.kuis.Quizzes
 import com.example.login_post.model.CompDatas
 import com.example.login_post.model.UserDatas
 import com.example.repository.Repository
@@ -43,6 +44,15 @@ class MainViewModel(private val repository: Repository): ViewModel() {
         viewModelScope.launch {
             val response = repository.getListUserDatas()
             myListUserDataResponse.value = response
+        }
+    }
+
+    val myListQuizResponse: MutableLiveData<Response<List<Quizzes>>> = MutableLiveData()
+
+    fun getListQuiz(){
+        viewModelScope.launch {
+            val response = repository.getListQuiz()
+            myListQuizResponse.value = response
         }
     }
 

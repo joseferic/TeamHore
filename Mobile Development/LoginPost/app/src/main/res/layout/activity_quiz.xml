@@ -7,4 +7,41 @@
     android:layout_height="match_parent"
     tools:context=".kuis.Quiz">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <TextView
+      android:id="@+id/tv_quiz"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Quiz Activity"
+      android:textSize="20sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <Button
+      android:id="@+id/btn_quiz_tebak_banyak_buah"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Quiz Tebak Banyak Buah"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.631" />
+
+  <Button
+      android:id="@+id/btn_quiz_tebak_gambar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Quiz Tebak Gambar"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.758" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

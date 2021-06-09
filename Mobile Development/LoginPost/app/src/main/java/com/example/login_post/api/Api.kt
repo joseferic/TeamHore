@@ -1,5 +1,6 @@
 package com.example.login_post.api
 
+import com.example.login_post.kuis.Quizzes
 import com.example.login_post.model.CompDatas
 import com.example.login_post.model.UserDatas
 import retrofit2.Response
@@ -23,4 +24,7 @@ interface Api {
 
     @GET("users")
     suspend fun getListUserData(): Response<List<UserDatas>>
+
+    @GET("quizzes")
+    suspend fun getListQuiz(): Response<List<Quizzes>>
 }
