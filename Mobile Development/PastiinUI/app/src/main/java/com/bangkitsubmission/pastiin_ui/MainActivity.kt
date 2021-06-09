@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         btnnav.setOnNavigationItemSelectedListener(this)
 
 
-
+        //test commit dari android studio
     }
 
     private fun loadFragment(localfragment: Fragment?): Boolean {
