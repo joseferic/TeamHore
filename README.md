@@ -6,7 +6,6 @@ Suci Ananda Sholihat M1721795 (MACHINE LEARNING)
 Arifatul Khasanah C2832609 (CLOUD COMPUTING)
 Fikih Firmansyah C3192855 (CLOUD COMPUTING)
 
-# Machine Learning Path: Riefky Arif Ibrahim M0101084 and Suci Ananda Sholihat M1721795
 # Dataset source (Fruit):
 https://www.kaggle.com/moltean/fruits
 
