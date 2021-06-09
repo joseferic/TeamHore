@@ -79,6 +79,4 @@ In general, the model that we have created can predict the added image well and 
  -  Create Log metrics and uptime checks to monitor logs from microservices.
 ![console cloud google com_monitoring_metrics-explorer_pageState=%7B%22xyChart%22_%7B%22dataSets%22_%5B%7B%22timeSeriesFilter%22_%7B%22filter%22_%22metric type%3D%5C%22logging googleapis com%2Fuser%2Fhoreee-api-m (1)](https://user-images.githubusercontent.com/54542591/121374509-25a1a900-c96a-11eb-8781-eee5136b4bf1.png)
 
-
-# Summary:
 In general, we are ready to serve the needs of other teams such as those who want tensorflow with kers for training data, resfull api, web servers, and other services that are ready to support projects.
