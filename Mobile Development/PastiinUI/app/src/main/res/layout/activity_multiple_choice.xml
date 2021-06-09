@@ -54,6 +54,7 @@
                 android:minHeight="50dp"
                 android:progress="0"
                 android:indeterminate="false"
+                android:layout_margin="15dp"
                 />
 
             <TextView

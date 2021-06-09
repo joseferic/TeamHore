@@ -122,6 +122,7 @@ class MultipleChoice : AppCompatActivity(), View.OnClickListener {
                             intent.putExtra("score",mCorrectAnswer)
                             Toast.makeText(this, "Congratulation",Toast.LENGTH_LONG).show()
                             startActivity(intent)
+                            finish()
                         }
                     }
                 } else {

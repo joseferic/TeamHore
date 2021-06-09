@@ -50,7 +50,9 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+
+            />
 
         <EditText
             android:id="@+id/Email"
@@ -62,7 +64,11 @@
             android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textresult" />
+            app:layout_constraintTop_toBottomOf="@+id/textresult"
+            app:backgroundTint="@color/grey"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/grey"
+            />
 
         <EditText
             android:id="@+id/Password"
@@ -74,7 +80,11 @@
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Email" />
+            app:layout_constraintTop_toBottomOf="@+id/Email"
+            app:backgroundTint="@color/grey"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/grey"
+            />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnlogin"

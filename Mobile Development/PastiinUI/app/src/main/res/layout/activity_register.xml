@@ -56,6 +56,9 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <EditText
+            app:backgroundTint="@color/grey"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/grey"
             android:id="@+id/Name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -68,6 +71,9 @@
             app:layout_constraintTop_toBottomOf="@+id/textresult" />
 
         <EditText
+            app:backgroundTint="@color/grey"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/grey"
             android:id="@+id/Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -81,6 +87,9 @@
 
         <EditText
             android:id="@+id/Password"
+            app:backgroundTint="@color/grey"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/grey"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
