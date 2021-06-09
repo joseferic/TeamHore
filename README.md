@@ -40,8 +40,7 @@ In general, the model that we have created can predict the added image well and 
 
 # Agenda:
  -  Make Restful API with App Engine to connect ML and Android.
-![console cloud google com_appengine_authuser=2 organizationId=112315058424 project=western-will-312804 serviceId=default](https://user-images.githubusercontent.com/54542591/121374228-eecb9300-c969-11eb-9646-f8e6010cd57f.png)
-
+<img src="https://user-images.githubusercontent.com/54542591/121374228-eecb9300-c969-11eb-9646-f8e6010cd57f.png" width="48">
  -  Build database server with Cloud SQL to store data object.
 ![console cloud google com_sql_instances_db-check_overview_authuser=2 organizationId=112315058424 project=western-will-312804 cloudshell=true](https://user-images.githubusercontent.com/54542591/121374304-fe4adc00-c969-11eb-9949-9851d464929f.png)
 
